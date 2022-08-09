@@ -2,13 +2,12 @@
 
 <x-admin-nav />
 
-
-    <div class="w-full bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+<div class="w-full max-w-xxl">
 
         <x-admin_users_menu />
 
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-2">
-                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+                <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-800 dark:text-white">
                     <tr>
                         <th scope="col" class="py-3 px-6">
                             id
@@ -32,7 +31,7 @@
                 </thead>
                 <tbody>
                     @foreach ($users as $user)   
-                        <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                        <tr class="bg-white border-b dark:bg-gray-700 dark:border-gray-400">
                             <td class="py-4 px-6">
                                 {{ $user->id }}
                             </td>
@@ -57,7 +56,7 @@
                 </tbody>
             </table>
         </div>
-    </div>
+
 
 
 </x-layout>

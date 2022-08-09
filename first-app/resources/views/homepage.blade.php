@@ -3,7 +3,7 @@
 <div class="container mt-3 mb-3">
     <div class="w-full flex">
 
-        <div class="w-4/5 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div class="w-4/5 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 dark:bg-gray-800 dark:text-white">
             test
         </div>
 
