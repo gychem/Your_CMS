@@ -7,13 +7,7 @@
 
     <div class="w-full max-w-xxl">
         <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-            
-
-   <x-admin_articles_menu />
-
-<!-- Create the editor container -->
-
-
+        
         <form action="{{route('admin/news/create')}}" method="POST" class="mt-6">
         @csrf
         <div class="mb-4">

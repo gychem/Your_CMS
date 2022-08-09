@@ -4,8 +4,6 @@
 
 <div class="w-full max-w-xxl">
     <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-            
-        <x-admin_articles_menu />
 
         <div class="overflow-x-auto relative">
             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-2">

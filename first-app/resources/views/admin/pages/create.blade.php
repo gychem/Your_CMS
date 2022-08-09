@@ -7,8 +7,6 @@
 
     <div class="w-full max-w-xxl">
         <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-            
-        <x-admin_pages_menu />
 
         <form action="{{route('admin/pages/create')}}" method="POST" class="mt-6">
         @csrf

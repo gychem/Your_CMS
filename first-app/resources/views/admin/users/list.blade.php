@@ -4,9 +4,7 @@
 
 <div class="w-full max-w-xxl">
 
-        <x-admin_users_menu />
-
-            <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-2">
+             <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
                 <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-800 dark:text-white">
                     <tr>
                         <th scope="col" class="py-3 px-6">
