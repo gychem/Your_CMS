@@ -6,33 +6,33 @@
     <x-admin-nav />
 
     <div class="w-full max-w-xxl">
-        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 dark:bg-gray-800">
             
-        <form action="{{ route('admin/users/create') }}" method="POST" class="mt-6">
+        <form action="{{ route('admin/users/create') }}" method="POST">
         @csrf
         <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="name">
+            <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-gray-300" for="name">
                 Name
             </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="name" id="name" type="text" value="{{ old('name') }}" placeholder="Name">
+            <input class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" name="name" id="name" type="text" value="{{ old('name') }}" placeholder="Name">
             @error('name')
                 <div class="text-red-500 text-xs italic">{{ $message }}</div>  
             @enderror('name')
         </div>
         <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="email">
+            <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-gray-300" for="email">
                 Email
             </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="email" id="email" type="email" value="{{ old('email') }}" placeholder="E-mail">
+            <input class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" name="email" id="email" type="email" value="{{ old('email') }}" placeholder="E-mail">
             @error('email')
                 <div class="text-red-500 text-xs italic">{{ $message }}</div>  
             @enderror('email')
         </div>
         <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="password">
+            <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-gray-300" for="password">
                 Password
             </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="password" id="password" type="password" placeholder="***********">
+            <input class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" name="password" id="password" type="password" placeholder="***********">
             @error('password')
                 <div class="text-red-500 text-xs italic">{{ $message }}</div>  
             @enderror('password')

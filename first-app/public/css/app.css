@@ -1235,6 +1235,9 @@ input:checked + .toggle-bg {
 .border-r {
     border-right-width: 1px
 }
+.border-b-2 {
+    border-bottom-width: 2px
+}
 .border-blue-500 {
     --tw-border-opacity: 1;
     border-color: rgb(63 131 248 / var(--tw-border-opacity))
@@ -1266,6 +1269,18 @@ input:checked + .toggle-bg {
 .border-blue-600 {
     --tw-border-opacity: 1;
     border-color: rgb(28 100 242 / var(--tw-border-opacity))
+}
+.border-red-600 {
+    --tw-border-opacity: 1;
+    border-color: rgb(224 36 36 / var(--tw-border-opacity))
+}
+.border-gray-600 {
+    --tw-border-opacity: 1;
+    border-color: rgb(75 85 99 / var(--tw-border-opacity))
+}
+.border-slate-400 {
+    --tw-border-opacity: 1;
+    border-color: rgb(148 163 184 / var(--tw-border-opacity))
 }
 .bg-white {
     --tw-bg-opacity: 1;
@@ -1678,6 +1693,18 @@ input:checked + .toggle-bg {
     --tw-bg-opacity: 1;
     background-color: rgb(255 255 255 / var(--tw-bg-opacity))
 }
+.hover\:bg-slate-200:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(226 232 240 / var(--tw-bg-opacity))
+}
+.hover\:bg-purple-700:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(108 43 217 / var(--tw-bg-opacity))
+}
+.hover\:bg-slate-50:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(248 250 252 / var(--tw-bg-opacity))
+}
 .hover\:text-blue-800:hover {
     --tw-text-opacity: 1;
     color: rgb(30 66 159 / var(--tw-text-opacity))
@@ -1848,6 +1875,18 @@ input:checked + .toggle-bg {
 .dark .dark\:hover\:bg-gray-800:hover {
     --tw-bg-opacity: 1;
     background-color: rgb(31 41 55 / var(--tw-bg-opacity))
+}
+.dark .hover\:dark\:bg-gray-700:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(55 65 81 / var(--tw-bg-opacity))
+}
+.dark .dark\:hover\:bg-slate-50:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(248 250 252 / var(--tw-bg-opacity))
+}
+.dark .dark\:hover\:bg-slate-600:hover {
+    --tw-bg-opacity: 1;
+    background-color: rgb(71 85 105 / var(--tw-bg-opacity))
 }
 .dark .dark\:hover\:text-white:hover {
     --tw-text-opacity: 1;
@@ -2057,4 +2096,8 @@ input:checked + .toggle-bg {
     border-color: rgba(111,111,111,0);
     box-shadow: var(--tw-ring-inset) 0 0 0 calc(0px + var(--tw-ring-offset-width)) var(--tw-ring-color);
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+}
+
+.icon-hover-color-red:hover {
+    filter: invert(7%) sepia(84%) saturate(7499%) hue-rotate(6deg) brightness(111%) contrast(109%);
 }

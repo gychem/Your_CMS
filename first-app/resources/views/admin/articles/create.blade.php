@@ -6,25 +6,25 @@
     <x-admin-nav />
 
     <div class="w-full max-w-xxl">
-        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 dark:bg-gray-800">
         
-        <form action="{{route('admin/news/create')}}" method="POST" class="mt-6">
+        <form action="{{route('admin/news/create')}}" method="POST">
         @csrf
         <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="title">
+            <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-gray-300" for="title">
                 Article Title
             </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="title" id="title" type="title" value="{{ old('title') }}" placeholder="Article title">
+            <input class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" name="title" id="title" type="title" value="{{ old('title') }}" placeholder="Article title">
             @error('title')
                 <div class="text-red-500 text-xs italic">{{ $message }}</div>  
             @enderror('title')
         </div>
         <div class="mb-4">
             <div class="relative items-center justify-center overflow-hidden">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="category">
+                <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-gray-300" for="category">
                     Category
                 </label>
-                <select name="category" id="category" class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                <select name="category" id="category" class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline">
                     @foreach ($categories as $category)
                     <option name="category" id="category" value="{{$category->id}}">{{$category->name}}</option>
                     @endforeach
@@ -36,7 +36,7 @@
         </div>
         <div class="mb-4">
             <div class="relative items-center justify-center overflow-hidden">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="image">
+                <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-gray-300" for="image">
                     Upload Image
                 </label>
                 <input type="file" name="image"
@@ -47,16 +47,16 @@
             </div>
         </div>
         <div class="mb-6">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="excerpt">
+            <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-gray-300" for="excerpt">
                 Excerpt
             </label>
-            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" style="height: 150px" name="excerpt" id="excerpt" type="excerpt" value="{{ old('excerpt') }}" placeholder="Enter excerpt"></textarea>
+            <textarea class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" style="height: 150px" name="excerpt" id="excerpt" type="excerpt" value="{{ old('excerpt') }}" placeholder="Enter excerpt"></textarea>
             @error('excerpt')
                 <div class="text-red-500 text-xs italic">{{ $message }}</div>
             @enderror('excerpt') 
         </div>
         <div class="mb-6">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="body">
+            <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-gray-300" for="body">
                 Article Body
             </label>
 
