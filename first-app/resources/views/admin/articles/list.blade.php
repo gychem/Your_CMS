@@ -30,7 +30,7 @@
             </thead>
             <tbody>
                 @foreach ($articles as $article)   
-                    <tr onclick="window.location='/news/{{ $article->slug }}';" class="bg-white border-b cursor-pointer hover:bg-slate-50 dark:bg-gray-700 dark:border-gray-700 dark:hover:bg-slate-600">
+                    <tr onclick="window.location='/news/{{ $article->slug }}';" class="bg-white border-b cursor-pointer hover:bg-slate-50 dark:bg-gray-700 dark:border-gray-600 dark:hover:bg-slate-600">
                         <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap">
                             {{ $article->title }}
                         </th>

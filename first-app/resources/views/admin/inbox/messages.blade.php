@@ -23,7 +23,7 @@
             </thead>
             <tbody>
                 @foreach ($messages as $message)   
-                    <tr onclick="window.location='/admin/inbox/{{ $message->id }}';" class="bg-white border-b cursor-pointer hover:bg-slate-50 dark:bg-gray-700 dark:border-gray-700 dark:hover:bg-slate-600">
+                    <tr onclick="window.location='/admin/inbox/{{ $message->id }}';" class="bg-white border-b cursor-pointer hover:bg-slate-50 dark:bg-gray-700 dark:border-gray-600 dark:hover:bg-slate-600">
                         <td class="py-4 px-6">
                             {{ $message->created_at }}
                         </td>

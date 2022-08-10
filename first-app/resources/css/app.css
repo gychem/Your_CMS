@@ -15,3 +15,7 @@
 .icon-hover-color-red:hover {
     filter: invert(7%) sepia(84%) saturate(7499%) hue-rotate(6deg) brightness(111%) contrast(109%);
 }
+
+.icon-hover-color-white:hover {
+    fill: #FFF5EE;
+}
