@@ -7,6 +7,7 @@ use Symfony\Component\HttpFoundation\Request;
 use Illuminate\Support\Str;
 use App\Models\Article;
 use App\Models\Category;
+use App\Models\Postimage;
 
 
 class ArticleController extends Controller
