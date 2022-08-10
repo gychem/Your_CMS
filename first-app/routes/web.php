@@ -21,11 +21,30 @@ Route::get('login', [\App\Http\Controllers\SessionsController::class, 'create'])
 Route::post('login', [\App\Http\Controllers\SessionsController::class, 'store'])->middleware('guest');
 Route::get('logout', [\App\Http\Controllers\SessionsController::class, 'destroy'])->name('logout')->middleware('auth'); 
 
-// Admin
-Route::get('admin', [\App\Http\Controllers\AdminController::class, 'index'])->name('admin')->middleware('admin'); 
-
 // Pages
 Route::get('{page:slug}', [\App\Http\Controllers\PagesController::class, 'show'])->name('{page:slug}');
+
+
+
+
+
+//For adding an image
+Route::get('/add-image',[ImageUploadController::class,'addImage'])->name('images.add');
+
+//For storing an image
+Route::post('/store-image',[ImageUploadController::class,'storeImage'])
+->name('images.store');
+
+//For showing an image
+Route::get('/view-image',[ImageUploadController::class,'viewImage'])->name('images.view');
+
+
+
+
+
+
+// Admin
+Route::get('admin', [\App\Http\Controllers\AdminController::class, 'index'])->name('admin')->middleware('admin'); 
 
 // Admin -> News
 Route::get('admin/news/create', [\App\Http\Controllers\ArticleController::class, 'create'])->name('admin/news/create')->middleware('admin'); 
