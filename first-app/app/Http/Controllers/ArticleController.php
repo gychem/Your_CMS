@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 
-//use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Request;
 use Illuminate\Support\Str;
+
 use App\Models\Article;
 use App\Models\Category;
 use App\Models\Postimage;
@@ -28,20 +28,33 @@ class ArticleController extends Controller
 
     public function store(Request $request)
     {
+        $image = '';
+        
+        if (!empty($request->image)) {
+            $file =$request->file('image');
+            $extension = $file->getClientOriginalExtension(); 
+            $filename = time().'.' . $extension;
+            $file->move(public_path('images/news'), $filename);
+            $data['image']= 'public/uploads/news/'.$filename;
+            $image = $data['image'];
+
+            $articleImage = Postimage::create([
+                'image' =>  $data['image']
+            ]); 
+        }
+
         $newArticle = Article::create([
             'category_id' => $request->category,
             'slug' =>  str()->slug($request->title),
             'title' => $request->title,
             'excerpt' => $request->excerpt,
             'body' => $request->body,
-            'user_id' => $request->user()->id
+            'user_id' => $request->user()->id,
+            'image' => $image
         ]);
 
-        $articleImage = Postimage::create([
-            'image' => $request->image,
-        ]);
 
-        return redirect('/admin/news')->with('success', "Article has been created.");;
+        return redirect('/admin/news')->with('success', "Article has been created.");
     } 
 
     public function show(Article $article) 

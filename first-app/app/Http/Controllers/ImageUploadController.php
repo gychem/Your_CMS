@@ -2,18 +2,19 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
+use App\Models\Postimage;
 
 class ImageUploadController extends Controller
 {
-    public function index(){
+    public function index() {
         return view('add_image');
     }
 
-    public function store(){
-       /*Logic to store data*/
+    public function store() {
+
     }
 
-    public function show(){
+    public function show() {
         return view('view_image');
     }
 }
