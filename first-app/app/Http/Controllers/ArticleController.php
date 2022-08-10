@@ -36,6 +36,10 @@ class ArticleController extends Controller
             'user_id' => $request->user()->id
         ]);
 
+        $articleImage = Postimage::create([
+            'image' => $request->image,
+        ]);
+
         return redirect('/admin/news')->with('success', "Article has been created.");;
     } 
 
