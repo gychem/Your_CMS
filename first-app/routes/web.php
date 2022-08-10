@@ -29,14 +29,14 @@ Route::get('{page:slug}', [\App\Http\Controllers\PagesController::class, 'show']
 
 
 //For adding an image
-Route::get('/add-image',[ImageUploadController::class,'addImage'])->name('images.add');
+Route::get('/add-image',[ImageUploadController::class,'index'])->name('images.add');
 
 //For storing an image
-Route::post('/store-image',[ImageUploadController::class,'storeImage'])
+Route::post('/store-image',[ImageUploadController::class,'store'])
 ->name('images.store');
 
 //For showing an image
-Route::get('/view-image',[ImageUploadController::class,'viewImage'])->name('images.view');
+Route::get('/view-image',[ImageUploadController::class,'show'])->name('images.view');
 
 
 
