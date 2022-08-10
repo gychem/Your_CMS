@@ -35,7 +35,7 @@ class ArticleController extends Controller
             $extension = $file->getClientOriginalExtension(); 
             $filename = time().'.' . $extension;
             $file->move(public_path('images/news'), $filename);
-            $data['image']= 'images/news/'.$filename;
+            $data['image']= '/images/news/'.$filename;
             $image = $data['image'];
 
             $articleImage = Postimage::create([

@@ -2,28 +2,30 @@
 
 <div class="container mb-3">
     <div class="w-full bg-white">
-        <article rel="noopener noreferrer" class="bg-white rounded shadow-md mx-auto group hover:no-underline focus:no-underline dark:bg-gray-900">
-            <img role="presentation" class="object-cover w-full rounded h-96 dark:bg-gray-500" src="https://source.unsplash.com/random/480x360?1">
+        <article rel="noopener noreferrer" class="bg-white rounded shadow-md mx-auto group hover:no-underline focus:no-underline dark:bg-gray-700">
+            <img role="presentation" class="object-cover w-full rounded h-96 dark:bg-gray-500" src="{{ $article->image }}">
             <div class="p-6 space-y-2">
-                <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline">{{ $article->title }}</h3>
+                <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline dark:text-white">{{ $article->title }}</h3>
                 <span class="text-xs dark:text-gray-400">{{ $article->created_at }} - Category: {{ $article->category->name }}</span>
-                <p><?php echo $article->body ?></p>
+                <section class="dark:text-gray-300">
+                    <p><?php echo $article->body ?></p>
+                </section>
             </div>
         </article>
     </div>
 
-    <div class="w-full rounded shadow-md mt-4 bg-white pl-6 pr-6 pt-2 pb-2">
+    <div class="w-full rounded shadow-md mt-4 bg-white pl-6 pr-6 pt-2 pb-2 dark:bg-gray-700">
         <form method="POST" action="/news/{{ $article->id }}/comment">
             @csrf
             <header class="flex items-center">
                 <div class="flex-shrink-0"> 
                     <img class="rounded shadow-md mt-1" src="https://i.pravatar.cc/60?u={{ auth()->user()->id }}" width="60" height="60" alt="">
                 </div>
-                <h2 class="ml-4 w-11/12">Post a comment</h2>
+                <h2 class="ml-4 w-11/12 dark:text-gray-300">Comment</h2>
             </header>
 
             <div class="mt-4">
-                <textarea name="body" id="body" class="w-full text-sm shadow-md focus:outline-none p-4" cols="30" rows="5" placeholder="Write a comment"></textarea>
+                <textarea name="body" id="body" class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" cols="30" rows="5" placeholder="Write your comment in this textarea"></textarea>
                 @error('body')
                     <div class="text-red-500 text-xs italic">{{ $message }}</div>
                 @enderror('body') 
