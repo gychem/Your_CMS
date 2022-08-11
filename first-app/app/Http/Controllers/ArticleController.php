@@ -64,7 +64,11 @@ class ArticleController extends Controller
 
     public function edit(Article $article) 
     {
-        return view('admin.articles.edit')->with('article', $article)->with('success', "Article ID $article->id has been updated.");;
+        $categories = Category::all();
+
+        $data = ['article' => $article, 'categories' => $categories];
+
+        return view('admin.articles.edit')->with('data', $data);
     } 
 
     public function update(Request $request, Article $article) 
@@ -76,7 +80,7 @@ class ArticleController extends Controller
             'body' => $request->body
         ]);
 
-        return redirect('news/' . $article->id);
+        return redirect('news/' . $article->id)->with('success', "Article ID $article->id has been updated.");
     } 
 
     public function destroy(Article $article) 

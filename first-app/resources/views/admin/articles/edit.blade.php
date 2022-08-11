@@ -6,26 +6,26 @@
     <x-admin-nav />
 
     <div class="w-full max-w-xxl">
-        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+        <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 dark:bg-slate-700">
 
-        <form action="/admin/news/edit/{{ $article->id }}" method="POST" class="mt-6">
+        <form action="/admin/news/edit/{{ $data['article']->id }}" method="POST">
         @csrf
         <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="title">
+            <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-slate-300" for="title">
                 Article Title
             </label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="title" id="title" type="title" value="{{ $article->title }}" placeholder="Article title">
+            <input class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" name="title" id="title" type="title" value="{{ $data['article']->title }}" placeholder="Article title">
             @error('title')
                 <div class="text-red-500 text-xs italic">{{ $message }}</div>  
             @enderror('title')
         </div>
         <div class="mb-4">
             <div class="relative items-center justify-center overflow-hidden">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="category">
+                <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-slate-300" for="category">
                     Category
                 </label>
-                <select name="category" id="category" class="shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                    @foreach ($categories as $category)
+                <select name="category" id="category" class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline">
+                    @foreach ($data['categories'] as $category)
                     <option name="category" id="category" value="{{$category->id}}">{{$category->name}}</option>
                     @endforeach
                 </select>
@@ -36,7 +36,7 @@
         </div>
         <div class="mb-4">
             <div class="relative items-center justify-center overflow-hidden">
-                <label class="block text-gray-700 text-sm font-bold mb-2" for="title">
+                <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-slate-300" for="title">
                     Upload Image
                 </label>
                 <input type="file" name="image"
@@ -47,19 +47,19 @@
             </div>
         </div>
         <div class="mb-6">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="excerpt">
+            <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-slate-300" for="excerpt">
                 Excerpt
             </label>
-            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" style="height: 150px" name="excerpt" id="excerpt" type="excerpt" placeholder="Enter excerpt">{{ $article->excerpt }}</textarea>
+            <textarea class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" style="height: 150px" name="excerpt" id="excerpt" type="excerpt" placeholder="Enter excerpt">{{ $data['article']->excerpt }}</textarea>
             @error('excerpt')
                 <div class="text-red-500 text-xs italic">{{ $message }}</div>
             @enderror('excerpt') 
         </div>
         <div class="mb-6">
-            <label class="block text-gray-700 text-sm font-bold mb-2" for="article">
+            <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-slate-300" for="article">
                 Article
             </label>
-            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" style="height: 250px" name="body" id="body" type="body" placeholder="Enter article">{{ $article->body }}</textarea>
+            <textarea name="body" id="sunEditor" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" style="height: 250px" value="{{ old('body') }}">{{ $data['article']->body }}</textarea>
             @error('body')
                 <div class="text-red-500 text-xs italic">{{ $message }}</div>
             @enderror('body') 

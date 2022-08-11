@@ -1805,6 +1805,10 @@ input:checked + .toggle-bg {
 .dark .dark\:bg-gray-800\/50 {
     background-color: rgb(31 41 55 / 0.5)
 }
+.dark .dark\:bg-slate-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(51 65 85 / var(--tw-bg-opacity))
+}
 .dark .dark\:bg-opacity-80 {
     --tw-bg-opacity: 0.8
 }
@@ -1835,6 +1839,10 @@ input:checked + .toggle-bg {
 .dark .dark\:text-gray-500 {
     --tw-text-opacity: 1;
     color: rgb(107 114 128 / var(--tw-text-opacity))
+}
+.dark .dark\:text-slate-300 {
+    --tw-text-opacity: 1;
+    color: rgb(203 213 225 / var(--tw-text-opacity))
 }
 .dark .dark\:hover\:bg-slate-600:hover {
     --tw-bg-opacity: 1;
