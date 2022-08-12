@@ -9,7 +9,8 @@
             <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-gray-300" for="name">
                 Name
             </label>
-            <input class="shadow appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="name" id="name" value="{{ old('name') }}" placeholder="Your Name">
+            <input class="shadow appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="name" id="name" 
+            value="@auth{{$user->username}}@endauth" placeholder="Your Name">
             @error('name')
                 <div class="text-red-500 text-xs italic">{{ $message }}</div>  
             @enderror('name')
@@ -19,7 +20,8 @@
                 E-mail address
             </label>
 
-            <input class="shadow appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="email" id="email" value="{{ old('email') }}" placeholder="E-mail address">
+            <input class="shadow appearance-none rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="email" id="email" 
+            value="@auth{{$user->email}}@endauth" placeholder="E-mail address">
            
             @error('email')
                 <div class="text-red-500 text-xs italic">{{ $message }}</div>  
@@ -30,7 +32,7 @@
                 Message
             </label>
 
-            <textarea class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" rows="5" name="message" value="{{ old('message') }}" placeholder="Enter message">tesd</textarea>
+            <textarea class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" rows="5" name="message" placeholder="Enter message">{{ old('message') }}</textarea>
 
             @error('message')
                 <div class="text-red-500 text-xs italic">{{ $message }}</div>

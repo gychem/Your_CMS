@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Contact;
+use App\Models\User;
 
 class ContactController extends Controller
 {
     public function index() 
     {
-        return view('contactForm');
+        $user = auth()->user();
+        return view('contactForm')->with('user', $user);
     }
 
     public function index_admin()
