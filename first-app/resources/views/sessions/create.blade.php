@@ -27,7 +27,7 @@
                     <x-button>
                         Sign In
                     </x-button>
-                    <a class="inline-block align-baseline font-bold text-sm text-gray-300 hover:text-white" href="#">
+                    <a class="inline-block align-baseline font-bold text-sm text-gray-300 hover:text-white" href="{{ route('lost.password.get') }}">
                         Forgot Password?
                     </a>
                 </div>

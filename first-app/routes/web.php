@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ForgotPasswordController;
 
 Route::get('/', function () {
     return view('homepage');
@@ -23,6 +23,12 @@ Route::post('register', [\App\Http\Controllers\RegisterController::class, 'store
 Route::get('login', [\App\Http\Controllers\SessionsController::class, 'create'])->name('login')->middleware('guest');
 Route::post('login', [\App\Http\Controllers\SessionsController::class, 'store'])->middleware('guest');
 Route::get('logout', [\App\Http\Controllers\SessionsController::class, 'destroy'])->name('logout')->middleware('auth'); 
+
+//User -> Forget Password
+Route::get('lost-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('lost.password.get');
+Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('forget.password.post'); 
+Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
+Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 
 // Admin
 Route::get('admin', [\App\Http\Controllers\AdminController::class, 'index'])->name('admin')->middleware('admin'); 
