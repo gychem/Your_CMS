@@ -11,13 +11,13 @@
         <form action="/admin/users/edit/{{ $user->id }}" method="POST">
         @csrf
         <div class="mb-4">
-            <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-gray-300" for="name">
-                Name
+            <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-gray-300" for="username">
+                Username
             </label>
-            <input class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" name="name" id="name" type="name" value="{{ $user->name }}" placeholder="Name">
-            @error('name')
+            <input class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" name="username" id="username" value="{{ $user->username }}" placeholder="Username">
+            @error('username')
                 <div class="text-red-500 text-xs italic">{{ $message }}</div>  
-            @enderror('name')
+            @enderror('username')
         </div>
         <div class="mb-4">
             <div class="relative items-center justify-center overflow-hidden">
