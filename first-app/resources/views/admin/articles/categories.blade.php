@@ -44,7 +44,7 @@
             </thead>
             <tbody>
                 @foreach ($categories as $category)   
-                    <tr onclick="window.location='#';" class="cursor-pointer bg-white border-b hover:bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:hover:bg-gray-600">
+                    <tr onclick="window.location='/admin/news/categories/{{ $category->slug }}';" class="cursor-pointer bg-white border-b hover:bg-gray-50 dark:bg-gray-700 dark:border-gray-600 dark:hover:bg-gray-600">
                         <td class="py-4 px-6">
                             {{ $category->id }}
                         </td>

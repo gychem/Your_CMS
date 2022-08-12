@@ -36,7 +36,8 @@ Route::post('admin/news/edit/{article}', [\App\Http\Controllers\ArticleControlle
 Route::get('admin/news/delete/{article}', [\App\Http\Controllers\ArticleController::class, 'destroy'])->name('admin/news/delete/{article}')->middleware('admin'); 
 
 // Admin -> News -> Categories
-Route::get('admin/news/categories', [\App\Http\Controllers\AdminArticlesController::class, 'categories'])->name('admin/news/categories')->middleware('admin'); 
+Route::get('admin/news/categories', [\App\Http\Controllers\ArticleCategoryController::class, 'index'])->name('admin/news/categories')->middleware('admin'); 
+Route::get('admin/news/categories/{category:slug}', [\App\Http\Controllers\ArticleCategoryController::class, 'show'])->middleware('admin'); 
 Route::post('admin/news/categories/create', [\App\Http\Controllers\ArticleCategoryController::class, 'store'])->name('admin/news/categories/create')->middleware('admin'); 
 Route::get('admin/news/categories/delete/{category}', [\App\Http\Controllers\ArticleCategoryController::class, 'destroy'])->name('admin/news/categories/delete/{category}')->middleware('admin'); 
 

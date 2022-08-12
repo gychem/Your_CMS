@@ -19,9 +19,5 @@ class AdminArticlesController extends Controller
         return view('admin.articles.list')->with('data', $data);
     } 
 
-    public function categories() 
-    {
-        $categories = Category::all();
-        return view('admin.articles.categories')->with('categories', $categories);
-    } 
+
 }
