@@ -17,15 +17,7 @@ class ArticleCategoryController extends Controller
 
     public function show(Category $category) 
     {
-        $articles = [];
-
-        foreach (Article::all() as $article) { 
-            if($article->category->name == $category->name) {
-                array_push($articles, $article);
-            }
-            
-        }
-
+        $articles = Article::all()->where('category_id', '=', $category->id);
         return view('admin.articles.category')->with('articles', $articles);
     }
 

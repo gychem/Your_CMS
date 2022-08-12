@@ -12,10 +12,10 @@ Route::post('contact', [\App\Http\Controllers\ContactController::class, 'store']
 
 // News Articles
 Route::get('news', [\App\Http\Controllers\ArticleController::class, 'index'])->name('news');
+Route::get('news/categories/{category:slug}', [\App\Http\Controllers\ArticleController::class, 'index_category']);
 Route::get('news/authors/{author:slug}', [\App\Http\Controllers\ArticleController::class, 'index_author']);
 Route::get('news/{article:slug}', [\App\Http\Controllers\ArticleController::class, 'show']);
 Route::post('news/{article}/comment', [\App\Http\Controllers\ArticleCommentsController::class, 'store'])->name('news/{article}/comment')->middleware('auth'); 
-
 
 // User
 Route::get('register', [\App\Http\Controllers\RegisterController::class, 'create'])->name('register')->middleware('guest');

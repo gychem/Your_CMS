@@ -28,6 +28,12 @@ class ArticleController extends Controller
         return view('articles.overview')->with('articles', $articles);
     } 
 
+    public function index_category(Category $category) 
+    {       
+        $articles = Article::all()->where('category_id', '=', $category->id);
+        return view('articles.overview')->with('articles', $articles);
+    } 
+
     public function create() 
     {
         $categories = Category::all();

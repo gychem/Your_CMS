@@ -13,7 +13,7 @@
                 </div>
 
                 <span class="text-xs dark:text-gray-400">By <a href="/news/authors/{{ $article->author->username }}">{{ $article->author->username }}</a></span>
-                    <span class="text-xs dark:text-gray-400"> in {{ $article->category->name }}</span><br>
+                    <span class="text-xs dark:text-gray-400"> in <a href="/news/categories/{{ $article->category->name }}">{{ $article->category->name }}</a></span><br>
 
                 <section class="dark:text-gray-300">
                     <p><?php echo $article->body ?></p>
