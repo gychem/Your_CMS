@@ -25,5 +25,14 @@ class CommentFactory extends Factory
             'user_id' => Article::factory(),
             'body' => $this->faker->paragraph
         ];
+
+        
+    }
+
+    public function run()
+    {
+        Comment::factory()
+            ->times(3)
+            ->create();
     }
 }
