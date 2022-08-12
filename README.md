@@ -2,7 +2,10 @@
 
 <b>ToDo's</b>
 
-- buttons -> restyle all buttons
+- news overview -> load more posts button
+- login -> forgot password
+- news -> show article -> cannot access page when logged out (error)
+- news -> categories -> edit category
 - image uploads -> image preview
 - site alert message -> better styling
 - stick footer to the bottom
