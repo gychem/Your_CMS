@@ -57,4 +57,17 @@ class UserController extends Controller
         $user->delete();
         return redirect('/admin/users')->with('success', "User $user->username has been deleted.");
     } 
+
+    public function search(Request $request) 
+    {
+        $users = User::all()->where('username', '=', 'gych');
+   
+        $search = $request->search;
+        $users = User::where('username','like','%'.$search.'%')
+                        ->orWhere('rank','like','%'.$search.'%')
+                        ->orWhere('email','like','%'.$search.'%')
+                        ->orderBy('id')->get();
+
+        return view('admin.users.list')->with('users', $users);
+    } 
 }

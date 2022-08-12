@@ -4,11 +4,13 @@
 
 <div class="w-full max-w-xxl">
 
-    <form action="{{ route('admin/users/search') }}" class="w-full flex gap-2 text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-white p-2 rounded" method="POST">
-    @csrf
-        <input class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" name="search" id="search" type="text" placeholder="Search on username, e-mail or rank">  
-        <x-button>Search</x-button>
-    </form>
+    <div class="w-full flex gap-2 text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-white p-2 rounded">
+        <form action="{{ route('admin/users/search') }}" method="POST">
+        @csrf
+            <input class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" name="search" id="search" type="text" placeholder="Search on username, e-mail or rank">  
+            <x-button>Search</x-button>
+        </form>
+    </div>
 
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-2 rounded overflow-hidden">
         <thead class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-800 dark:text-white">
