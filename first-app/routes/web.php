@@ -43,6 +43,7 @@ Route::get('admin/news', [\App\Http\Controllers\AdminArticlesController::class, 
 Route::get('admin/news/edit/{article:slug}', [\App\Http\Controllers\ArticleController::class, 'edit'])->middleware('admin');  
 Route::post('admin/news/edit/{article:slug}', [\App\Http\Controllers\ArticleController::class, 'update'])->middleware('admin');  
 Route::get('admin/news/delete/{article:slug}', [\App\Http\Controllers\ArticleController::class, 'destroy'])->middleware('admin'); 
+Route::post('admin/news/search', [\App\Http\Controllers\ArticleController::class, 'search'])->name('admin/news/search')->middleware('admin');
 
 // Admin -> News -> Categories
 Route::get('admin/news/categories', [\App\Http\Controllers\ArticleCategoryController::class, 'index'])->name('admin/news/categories')->middleware('admin'); 
