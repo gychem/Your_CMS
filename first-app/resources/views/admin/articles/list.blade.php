@@ -21,6 +21,9 @@
                         Author
                     </th>
                     <th scope="col" class="py-3 px-6">
+                        Comments
+                    </th>
+                    <th scope="col" class="py-3 px-6">
                         Edit
                     </th>
                     <th scope="col" class="py-3 px-6">
@@ -41,7 +44,10 @@
                         {{ $article->category->name }}
                         </td>
                         <td class="py-4 px-6">
-                            {{ $article->user_id }}
+                            {{ $article->author->username }}
+                        </td>
+                        <td class="py-4 px-6">
+                            {{ $article }}
                         </td>
                         <td class="py-4 px-6">
                             <a href="/admin/news/edit/{{ $article->id }}">

@@ -6,7 +6,7 @@
             <img role="presentation" class="object-cover w-full rounded h-96 dark:bg-gray-500" src="{{ $article->image }}">
             <div class="p-6 space-y-2">
                 <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline dark:text-white">{{ $article->title }}</h3>
-                <span class="text-xs dark:text-gray-400">{{ $article->created_at }} - Category: {{ $article->category->name }}</span>
+                <span class="text-xs dark:text-gray-400">{{ $article->created_at }} - Category: {{ $article->category->name }} posted by {{ $article->author->username }}</span>
                 <section class="dark:text-gray-300">
                     <p><?php echo $article->body ?></p>
                 </section>

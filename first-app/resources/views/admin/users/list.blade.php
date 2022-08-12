@@ -8,10 +8,10 @@
                 <thead class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-800 dark:text-white">
                     <tr>
                         <th scope="col" class="py-3 px-6">
-                            id
+                            ID
                         </th>
                         <th scope="col" class="py-3 px-6">
-                            Name
+                            Username
                         </th>
                         <th scope="col" class="py-3 px-6">
                             Email
@@ -34,7 +34,7 @@
                                 {{ $user->id }}
                             </td>
                             <td class="py-4 px-6">
-                            {{ $user->name }}
+                            {{ $user->username }}
                             </td>
                             <td class="py-4 px-6">
                                 {{ $user->email }}

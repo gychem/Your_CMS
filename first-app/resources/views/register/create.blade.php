@@ -9,7 +9,7 @@
                     <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-gray-300" for="username">
                         Username
                     </label>
-                    <input class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" name="username" id="username" value="{{ old('username') }}" placeholder="Your Name">
+                    <input class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" name="username" id="username" value="{{ old('username') }}" placeholder="Username">
                     @error('username')
                         <div class="text-red-500 text-xs italic">{{ $message }}</div>  
                     @enderror('username')
