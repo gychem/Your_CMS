@@ -36,6 +36,26 @@ class PagesController extends Controller
         return view('pages.show')->with('page', $page);
     } 
 
+    public function edit(Page $page) 
+    {
+        return view('admin.pages.edit')->with('page', $page);
+    } 
+
+    public function update(Request $request, Page $page) 
+    {
+
+        $article->update([
+            'category_id' => $request->category,
+            'slug' =>  str()->slug($request->title),
+            'title' => $request->title,
+            'excerpt' => $request->excerpt,
+            'body' => $request->body,
+            'image' => $image
+        ]);
+
+        return redirect('news/' . $article->slug)->with('success', "Article ID $article->id has been updated.");
+    } 
+
     public function destroy(Page $page) 
     {
         $page->delete();
