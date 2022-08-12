@@ -23,7 +23,7 @@ class UserController extends Controller
     public function store() // Create the user
     {
         $rules = [
-            'name' => ['required', 'min:3', 'max:255', Rule::unique('users', 'name')],
+            'username' => ['required', 'min:3', 'max:255', Rule::unique('users', 'username')],
             'email' => ['required', 'email', 'max:255', Rule::unique('users', 'email')],
             'password' => ['required', 'min:7', 'max:255']
         ];

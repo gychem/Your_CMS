@@ -6,19 +6,19 @@
             <form action="register" method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 dark:bg-gray-800">
                 @csrf
                 <div class="mb-4">
-                    <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-gray-300" for="name">
-                        Name
+                    <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-gray-300" for="username">
+                        Username
                     </label>
-                    <input class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" name="name" id="name" type="name" value="{{ old('name') }}" placeholder="Your Name">
-                    @error('name')
+                    <input class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" name="username" id="username" value="{{ old('username') }}" placeholder="Your Name">
+                    @error('username')
                         <div class="text-red-500 text-xs italic">{{ $message }}</div>  
-                    @enderror('name')
+                    @enderror('username')
                 </div>
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-gray-300" for="email">
                         E-mail address
                     </label>
-                    <input class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" name="email" id="email" type="email" value="{{ old('email') }}" placeholder="E-mail address">
+                    <input class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" name="email" id="email" value="{{ old('email') }}" placeholder="E-mail address">
                     @error('email')
                         <div class="text-red-500 text-xs italic">{{ $message }}</div>  
                     @enderror('email')
