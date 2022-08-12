@@ -7,7 +7,8 @@ use Illuminate\Support\Str;
 
 use App\Models\Article;
 use App\Models\Category;
-
+use App\Models\Author;
+use App\Models\User;
 use App\Models\Postimage;
 
 
@@ -18,6 +19,12 @@ class ArticleController extends Controller
     public function index() 
     {
         $articles = Article::all();
+        return view('articles.overview')->with('articles', $articles);
+    } 
+
+    public function index_author(Author $author) 
+    {       
+        $articles = Article::all()->where('user_id', '=', $author->user_id);
         return view('articles.overview')->with('articles', $articles);
     } 
 

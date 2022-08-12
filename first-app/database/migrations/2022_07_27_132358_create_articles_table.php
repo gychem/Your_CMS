@@ -21,7 +21,7 @@ return new class extends Migration
             $table->text('excerpt');
             $table->text('body');
             $table->string('image')->nullable();
-            $table->foreignId('user_id');
+            $table->foreignId('author_id');
             $table->timestamps();
             $table->timestamp('published_at')->nullable();
         });

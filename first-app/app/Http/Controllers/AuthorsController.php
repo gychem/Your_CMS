@@ -12,22 +12,12 @@ class AuthorsController extends Controller
     public function index()
     {
         $authors = Author::all();
-
         return view('admin.articles.authors')->with('authors', $authors);
     }
 
     public function show(Author $author) 
     {
-        $articles = [];
-
-        foreach (Article::all() as $article) { 
-
-            if($article->author->username == $author->username) {
-                array_push($articles, $article);
-            }
-            
-        }
-
+        $articles = Article::all()->where('user_id', '=', $author->user_id);
         return view('admin.articles.author')->with('articles', $articles);
     }
 }
