@@ -8,7 +8,7 @@
     <div class="w-full max-w-xxl">
         <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 dark:bg-slate-700">
 
-        <form action="/admin/news/edit/{{ $data['article']->id }}" method="POST">
+        <form action="/admin/news/edit/{{ $data['article']->id }}" method="POST" enctype="multipart/form-data"> 
         @csrf
         <div class="mb-4">
             <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-slate-300" for="title">
@@ -36,7 +36,7 @@
         </div>
         <div class="mb-4">
             <div class="relative items-center justify-center overflow-hidden">
-                <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-slate-300" for="title">
+                <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-gray-300" for="image">
                     Upload Image
                 </label>
                 <input type="file" name="image"

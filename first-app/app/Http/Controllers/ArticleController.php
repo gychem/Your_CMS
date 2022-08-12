@@ -74,14 +74,31 @@ class ArticleController extends Controller
 
     public function update(Request $request, Article $article) 
     {
+        $image = '';
+
+        if (!empty($request->image)) {
+            $file =$request->file('image');
+            $extension = $file->getClientOriginalExtension(); 
+            $filename = time().'.' . $extension;
+            $file->move(public_path('images/news'), $filename);
+            $data['image']= '/images/news/'.$filename;
+            $image = $data['image'];
+
+            $articleImage = Postimage::create([
+                'image' =>  $data['image']
+            ]); 
+        }
+
         $article->update([
-            'title' => $request->title,
+            'category_id' => $request->category,
             'slug' =>  str()->slug($request->title),
+            'title' => $request->title,
             'excerpt' => $request->excerpt,
-            'body' => $request->body
+            'body' => $request->body,
+            'image' => $image
         ]);
 
-        return redirect('news/' . $article->id)->with('success', "Article ID $article->id has been updated.");
+        return redirect('news/' . $article->slug)->with('success', "Article ID $article->id has been updated.");
     } 
 
     public function destroy(Article $article) 
