@@ -17,7 +17,7 @@
                 </thead>
                 <tbody>
                     @foreach ($authors as $author)   
-                        <tr onclick="window.location='/admin/news/authors/{{ $author->id }}';" class="cursor-pointer bg-white hover:bg-gray-50 border-b dark:bg-gray-700 dark:border-gray-600 dark:hover:bg-slate-600">
+                        <tr onclick="window.location='/admin/news/authors/{{ $author->slug }}';" class="cursor-pointer bg-white hover:bg-gray-50 border-b dark:bg-gray-700 dark:border-gray-600 dark:hover:bg-slate-600">
                             <td class="py-4 px-6">
                                 {{ $author->id }}
                             </td>

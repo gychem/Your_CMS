@@ -31,9 +31,9 @@ Route::get('{page:slug}', [\App\Http\Controllers\PagesController::class, 'show']
 Route::get('admin/news/create', [\App\Http\Controllers\ArticleController::class, 'create'])->name('admin/news/create')->middleware('admin'); 
 Route::post('admin/news/create', [\App\Http\Controllers\ArticleController::class, 'store'])->name('admin/news/create')->middleware('admin');  
 Route::get('admin/news', [\App\Http\Controllers\AdminArticlesController::class, 'index'])->name('admin/news')->middleware('admin'); 
-Route::get('admin/news/edit/{article}', [\App\Http\Controllers\ArticleController::class, 'edit'])->name('admin/news/edit/{article}')->middleware('admin');  
-Route::post('admin/news/edit/{article}', [\App\Http\Controllers\ArticleController::class, 'update'])->name('admin/news/edit/{article}')->middleware('admin');  
-Route::get('admin/news/delete/{article}', [\App\Http\Controllers\ArticleController::class, 'destroy'])->name('admin/news/delete/{article}')->middleware('admin'); 
+Route::get('admin/news/edit/{article:slug}', [\App\Http\Controllers\ArticleController::class, 'edit'])->middleware('admin');  
+Route::post('admin/news/edit/{article:slug}', [\App\Http\Controllers\ArticleController::class, 'update'])->middleware('admin');  
+Route::get('admin/news/delete/{article:slug}', [\App\Http\Controllers\ArticleController::class, 'destroy'])->middleware('admin'); 
 
 // Admin -> News -> Categories
 Route::get('admin/news/categories', [\App\Http\Controllers\ArticleCategoryController::class, 'index'])->name('admin/news/categories')->middleware('admin'); 
@@ -43,7 +43,7 @@ Route::get('admin/news/categories/delete/{category}', [\App\Http\Controllers\Art
 
 // Admin -> News -> Authors
 Route::get('admin/news/authors', [\App\Http\Controllers\AuthorsController::class, 'index'])->name('admin/news/authors')->middleware('admin');
-Route::get('admin/news/authors/{author}', [\App\Http\Controllers\AuthorsController::class, 'show'])->name('showAuthor')->middleware('admin');
+Route::get('admin/news/authors/{author:slug}', [\App\Http\Controllers\AuthorsController::class, 'show'])->middleware('admin');
 
 // Admin -> Inbox
 Route::get('admin/inbox', [\App\Http\Controllers\ContactController::class, 'index_admin'])->name('admin/inbox')->middleware('admin');
@@ -61,7 +61,9 @@ Route::post('admin/users/edit/{user}', [\App\Http\Controllers\UserController::cl
 Route::get('admin/pages', [\App\Http\Controllers\PagesController::class, 'index'])->name('admin/pages')->middleware('admin');
 Route::get('admin/pages/create', [\App\Http\Controllers\PagesController::class, 'create'])->name('admin/pages/create')->middleware('admin');
 Route::post('admin/pages/create', [\App\Http\Controllers\PagesController::class, 'store'])->name('admin/pages/create')->middleware('admin');
-Route::get('admin/pages/delete/{page}', [\App\Http\Controllers\PagesController::class, 'destroy'])->name('admin/pages/delete/{page}')->middleware('admin'); 
+Route::get('admin/pages/edit/{page:slug}', [\App\Http\Controllers\PagesController::class, 'edit'])->middleware('admin');  
+Route::post('admin/pages/edit/{page:slug}', [\App\Http\Controllers\PagesController::class, 'update'])->middleware('admin');
+Route::get('admin/pages/delete/{page:slug}', [\App\Http\Controllers\PagesController::class, 'destroy'])->middleware('admin'); 
 
 // Admin -> Extensions
 Route::get('admin/extensions', [\App\Http\Controllers\ExtensionsController::class, 'index'])->name('admin/extensions')->middleware('admin');
