@@ -37,13 +37,13 @@ class UserController extends Controller
 
     public function edit(User $user) 
     {
-        return view('admin.users.edit')->with('user', $user)->with('success', "User $user->name has been updated.");;
+        return view('admin.users.edit')->with('user', $user)->with('success', "User $user->username has been updated.");;
     } 
 
     public function update(Request $request, User $user) 
     {
         $user->update([
-            'name' => $request->name,
+            'username' => $request->username,
             'email' =>  $request->email,
             'rank' => $request->rank,
             'password' => $request->password
@@ -55,6 +55,6 @@ class UserController extends Controller
     public function destroy(User $user) 
     {
         $user->delete();
-        return redirect('/admin/users')->with('success', "User $user->name has been deleted.");
+        return redirect('/admin/users')->with('success', "User $user->username has been deleted.");
     } 
 }

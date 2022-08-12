@@ -25,6 +25,7 @@
                     Rank
                 </label>
                 <select name="rank" id="rank" class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline">
+                    <option name="rank" id="rank" value="{{ $user->rank }}" selected>{{ $user->rank }}</option>
                     <option name="rank" id="rank" value="user">User</option>
                     <option name="rank" id="rank" value="admin">Admin</option>
                 </select>
