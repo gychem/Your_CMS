@@ -32,7 +32,7 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach ($articles as $article)   
+                @foreach ($data['articles'] as $article)   
                     <tr onclick="window.location='/news/{{ $article->slug }}';" class="bg-white border-b cursor-pointer hover:bg-slate-50 dark:bg-gray-700 dark:border-gray-600 dark:hover:bg-slate-600">
                         <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap">
                             {{ $article->title }}
@@ -41,13 +41,13 @@
                             {{ $article->created_at }}
                         </td>
                         <td class="py-4 px-6">
-                        {{ $article->category->name }}
+                            {{ $article->category->name }}
                         </td>
                         <td class="py-4 px-6">
                             {{ $article->author->username }}
                         </td>
                         <td class="py-4 px-6">
-                            {{ $article }}
+                            {{ $article->comments->count() }}
                         </td>
                         <td class="py-4 px-6">
                             <a href="/admin/news/edit/{{ $article->id }}">

@@ -36,7 +36,7 @@
                                 {{ $article->title }}
                             </td>
                             <td class="py-4 px-6">
-                                -
+                                {{ $article->comments->count() }}
                             </td>
                             <td class="py-4 px-6">
                                 <a href="/admin/news/edit/{{ $article->id }}">
