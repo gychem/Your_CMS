@@ -1,11 +1,15 @@
 <h1>Gych CMS [WIP]</h1>
 
-<h2>Known Bugs</h2>
 
-- Not all information is updating when editing a user.
-- Can not access news articles show page when logged out.
 
-<br>
+<h2>Current Features</h2>
+<b>Admin Panel</b>
+- Create and manage news articles, categories, authors, pages and users.
+- Inbox for contact messages.
+
+<b>User System</b>
+- Login & register 
+- Forgot password
 
 <h2>Upcoming features</h2>
 
@@ -32,3 +36,4 @@
 <b>Improve Styling</b>
 - Success alert message.
 - Forgot password e-mail.
+- Footer
