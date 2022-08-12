@@ -3,7 +3,7 @@
 <div class="container mt-3">
     <div class="row flex justify-center">
         <div class="w-full max-w-xs">
-            <form action="register" method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 dark:bg-gray-800">
+            <form action="register" method="POST" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 dark:bg-gray-700">
                 @csrf
                 <div class="mb-4">
                     <label class="block text-gray-700 text-sm font-bold mb-2 dark:text-gray-300" for="username">
@@ -33,9 +33,9 @@
                     @enderror('password') 
                 </div>
                 <div class="flex items-center justify-between">
-                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                    <x-button>
                         Sign Up
-                    </button>
+                    </x-button>
                 </div>
             </form>
         </div>

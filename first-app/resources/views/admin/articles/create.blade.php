@@ -67,7 +67,7 @@
             @enderror('body') 
         </div>
         <div class="flex items-center justify-between">
-            <x-button id="postArticleButton">
+            <x-button>
                 Add
             </x-button>
 

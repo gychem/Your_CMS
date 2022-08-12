@@ -17,7 +17,7 @@
                 @enderror('category')
             </div>
             <div class="flex items-center justify-between ml-4 mt-3">
-                <x-button>
+                <x-button class="text-gray-800 bg-gray-50 hover:bg-gray-100 py-2 px-4 rounded shadow-md dark:text-gray-300 dark:bg-gray-800 dark:hover:bg-gray-600">
                     Add
                 </x-button>
             </div>

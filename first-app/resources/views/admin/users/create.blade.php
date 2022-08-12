@@ -39,9 +39,9 @@
         </div>
 
         <div class="flex items-center justify-between">
-            <button class="bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+            <x-button>
                 Create
-            </button>
+            </x-button>
         </div>
     </form>
 
