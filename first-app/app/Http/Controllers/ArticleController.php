@@ -57,6 +57,7 @@ class ArticleController extends Controller
             ]); 
         }
 
+
         $newArticle = Article::create([
             'category_id' => $request->category,
             'slug' =>  str()->slug($request->title),
