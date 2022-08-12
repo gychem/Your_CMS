@@ -13,11 +13,11 @@
             </a> -->
             <div class="grid justify-center grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
                 @foreach ($articles as $article) 
-                    <a rel="noopener noreferrer" href="/news/{{ $article->slug }}" class="bg-white rounded shadow-md  w-full mx-auto group hover:no-underline focus:no-underline dark:bg-gray-700">
+                    <a rel="noopener noreferrer" href="/news/{{ $article->slug }}" class="bg-white hover:bg-gray-100 rounded shadow-md  w-full mx-auto group hover:no-underline focus:no-underline dark:bg-gray-700 dark:hover:bg-gray-800">
                         <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500" src="{{ $article->image }}">
                         <div class="p-6 space-y-2">
-                            <h3 class="text-2xl font-semibold group-hover:underline group-focus:underline dark:text-white">{{ $article->title }}</h3>
-                            <span class="text-xs dark:text-gray-700">{{ $article->created_at }}</span>
+                            <h3 class="text-2xl font-semibold dark:text-white">{{ $article->title }}</h3>
+                            <span class="text-xs dark:text-gray-500">{{ $article->created_at }}</span>
                             <p class="dark:text-gray-400">{{ $article->excerpt }}</p>
                         </div>
                     </a>

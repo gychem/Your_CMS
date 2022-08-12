@@ -4,13 +4,15 @@
 
 <div class="w-full max-w-xxl">
 
-    <div class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 dark:bg-gray-700 dark:text-white">
-
-        <header class="flex justify-between border-b-2 border-slate-400">
-            <div>{{ $message->name }} <span class="ml-1">( {{ $message->email }} )</span></div>
-            <div>{{ $message->created_at }}</div>
-        </header>
-
+    <header class="flex justify-between dark:bg-gray-800 p-2">
+        <div>
+            <span class="dark:text-white">Message from </span>
+            <span class="dark:text-slate-300">{{ $message->name }}</span> 
+            <span class="ml-1 mt-2 text-sm dark:text-gray-400">( {{ $message->email }} )</span>
+        </div>
+        <span class="text-xs dark:text-gray-400">{{ $message->created_at }}</span>
+    </header>
+    <div class="bg-white shadow-md p-2 mb-4 dark:bg-gray-700 dark:text-gray-300">
         {{ $message->message }}
     </div>
 
