@@ -18,7 +18,11 @@ class ArticleFactory extends Factory
     public function definition()
     {
 
+
+
         
+        $randomNumber = rand(0, 99999);
+          
         return [
             'category_id' => 1,
             'title' => $this->faker->sentence,
@@ -26,7 +30,7 @@ class ArticleFactory extends Factory
             'excerpt' => $this->faker->sentence,
             'body' => $this->faker->paragraph,
             'user_id' => 1,
-            'image' => 'https://source.unsplash.com/random'
+            'image' => 'https://source.unsplash.com/random?sig='. $randomNumber
         ];
     }
 
