@@ -11,28 +11,29 @@
 <b>User System</b>
 - Login & register 
 - Forgot password
+- Ranks: user, author and admin
+- Profiles
 
 <b>Contact</b>
-- Auto fill in fields when user is logged in.
+- Auto filler for input fields when logged in.
+- Message is sent to e-mail and admin inbox.
 
 <br>
 
 <h2>Upcoming features</h2>
 
 <b>News Articles</b>
-- functional button to load more articles on the overview page
 - Metadata 
-
-
 
 <b>User</b>
 - E-mail verification
-- Profile
+- Profile: Media, Feed, Settings, light & dark mode)
 - Configuration
 
 <b>Admin</b>
 - Configuration
 - Option to edit news categories.
+- Page templates
 
 <b>Image Uploads</b>
 - Use images in SunEditor when creating a page or news article.

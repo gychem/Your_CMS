@@ -28,8 +28,6 @@ Route::get('login', [\App\Http\Controllers\SessionsController::class, 'create'])
 Route::post('login', [\App\Http\Controllers\SessionsController::class, 'store'])->middleware('guest');
 Route::get('logout', [\App\Http\Controllers\SessionsController::class, 'destroy'])->name('logout')->middleware('auth'); 
 
-//User -> Profile
-Route::get('{user}', [\App\Http\Controllers\ProfilesController::class, 'index']);
 
 //User -> Forget Password
 Route::get('lost-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('lost.password.get');
@@ -38,7 +36,9 @@ Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showRese
 Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 
 // Admin
-Route::get('admin', [\App\Http\Controllers\AdminController::class, 'index'])->name('admin')->middleware('admin'); 
+Route::get('admin', [\App\Http\Controllers\AdminController::class, 'index'])->name('admin'); 
+//User -> Profile
+Route::get('{user}', [\App\Http\Controllers\ProfilesController::class, 'index']);
 
 // Pages
 Route::get('{page:slug}', [\App\Http\Controllers\PagesController::class, 'show'])->name('{page:slug}');
@@ -91,3 +91,4 @@ Route::get('admin/dashboard', [\App\Http\Controllers\DashboardController::class,
 
 // Admin -> Back-up
 Route::get('admin/backup', [\App\Http\Controllers\DashboardController::class, 'index'])->name('admin/backup')->middleware('admin');
+

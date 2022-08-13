@@ -10,7 +10,7 @@ class ProfilesController extends Controller
 {
     public function index($user)
     {
-        $profile = Profile::all()->where('username', '=', $user);
+        $profile = Profile::where('username', '=', $user)->get();
         return view('profile.index')->with('profile', $profile);
     }
 }
