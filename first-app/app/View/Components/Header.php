@@ -4,6 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 use App\Models\Page;
+use App\Models\Profile;
 
 class Header extends Component
 {
@@ -13,10 +14,16 @@ class Header extends Component
      * @return void
      */
     public $pages;
+    public $profile;
 
     public function __construct()
     {
         $this->pages = Page::all();
+
+        if(auth()->user()) {
+            $this->profile = Profile::where('username', '=', auth()->user()->username)->get();
+        } 
+        
     }
 
     /**

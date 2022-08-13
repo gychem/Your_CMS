@@ -1408,6 +1408,9 @@ input:checked + .toggle-bg {
 .border-0 {
     border-width: 0px
 }
+.border-2 {
+    border-width: 2px
+}
 .border-b {
     border-bottom-width: 1px
 }
@@ -1416,6 +1419,9 @@ input:checked + .toggle-bg {
 }
 .border-r {
     border-right-width: 1px
+}
+.border-solid {
+    border-style: solid
 }
 .border-blue-500 {
     --tw-border-opacity: 1;
@@ -1448,6 +1454,23 @@ input:checked + .toggle-bg {
 .border-blue-600 {
     --tw-border-opacity: 1;
     border-color: rgb(28 100 242 / var(--tw-border-opacity))
+}
+.border-sky-500 {
+    --tw-border-opacity: 1;
+    border-color: rgb(14 165 233 / var(--tw-border-opacity))
+}
+.border-slate-300 {
+    --tw-border-opacity: 1;
+    border-color: rgb(203 213 225 / var(--tw-border-opacity))
+}
+.border-opacity-40 {
+    --tw-border-opacity: 0.4
+}
+.border-opacity-20 {
+    --tw-border-opacity: 0.2
+}
+.border-opacity-10 {
+    --tw-border-opacity: 0.1
 }
 .bg-white {
     --tw-bg-opacity: 1;
@@ -1503,6 +1526,22 @@ input:checked + .toggle-bg {
 .bg-gray-400 {
     --tw-bg-opacity: 1;
     background-color: rgb(156 163 175 / var(--tw-bg-opacity))
+}
+.bg-slate-400 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(148 163 184 / var(--tw-bg-opacity))
+}
+.bg-slate-700 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(51 65 85 / var(--tw-bg-opacity))
+}
+.bg-slate-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(30 41 59 / var(--tw-bg-opacity))
+}
+.bg-slate-100 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(241 245 249 / var(--tw-bg-opacity))
 }
 .bg-opacity-50 {
     --tw-bg-opacity: 0.5
@@ -1686,6 +1725,9 @@ input:checked + .toggle-bg {
 .uppercase {
     text-transform: uppercase
 }
+.capitalize {
+    text-transform: capitalize
+}
 .italic {
     font-style: italic
 }
@@ -1761,6 +1803,10 @@ input:checked + .toggle-bg {
 .text-gray-300 {
     --tw-text-opacity: 1;
     color: rgb(209 213 219 / var(--tw-text-opacity))
+}
+.text-red-800 {
+    --tw-text-opacity: 1;
+    color: rgb(155 28 28 / var(--tw-text-opacity))
 }
 .underline {
     -webkit-text-decoration-line: underline;
@@ -2067,6 +2113,10 @@ input:checked + .toggle-bg {
 }
 .dark .dark\:bg-gray-800\/50 {
     background-color: rgb(31 41 55 / 0.5)
+}
+.dark .dark\:bg-slate-800 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(30 41 59 / var(--tw-bg-opacity))
 }
 .dark .dark\:bg-opacity-80 {
     --tw-bg-opacity: 0.8

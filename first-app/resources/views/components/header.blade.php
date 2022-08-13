@@ -3,8 +3,7 @@
 
         <div class="mb-6 md:mb-0">
             <a href="/" class="flex items-center">
-                <img src="https://flowbite.com/docs/images/logo.svg" class="mr-3 h-8 mt-1" alt="FlowBite Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Site Logo</span>
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">Your CMS</span>
             </a>
         </div>
 
@@ -27,7 +26,23 @@
                         <a href="{{route('admin')}}" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Admin</a>
                     </li>
                     <li>
-                        <a href="{{route('logout')}}" class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Log Out</a>
+                        <button type="button" class="flex gap-2 capitalize block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700" aria-controls="dropdown-pages" data-collapse-toggle="dropdown-pages">
+            
+                            <img class="rounded-full" src="{{ $profile[0]['image'] }}" width="25px">
+                            
+                            {{ $profile[0]['username'] }}
+                        </button>
+                        <ul id="dropdown-pages" class="hidden py-2 absolute bg-slate-100  dark:bg-slate-800 rounded mt-2 z-20 border-solid border-2 border-slate-300 border-opacity-10">
+                            <li>
+                                <a href="/{{ $profile[0]['username'] }}" class="flex items-center p-2 w-full text-base font-normal text-gray-900 transition duration-75 group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700">Profile</a>
+                            </li>
+                            <li>
+                                <a href="{{route('admin/pages')}}" class="flex items-center p-2 w-full text-base font-normal text-gray-900 transition duration-75 group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700">Settings</a>
+                            </li>
+                            <li>
+                                <a href="/logout" class="flex items-center p-2 w-full text-base font-normal text-gray-900 transition duration-75 group hover:bg-gray-200 dark:hover:bg-gray-700 text-red-800">Logout</a>
+                            </li>
+                        </ul>
                     </li>
                     @else
                     <li>
