@@ -71,6 +71,8 @@
         </tbody>
     </table>
 
+    {{ $data['articles']->links('components.pagination') }}
+
 </div>
 
 </x-layout>

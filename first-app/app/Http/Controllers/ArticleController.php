@@ -125,7 +125,7 @@ class ArticleController extends Controller
     {
         $search = $request->search;
         $data['articles'] = Article::where('title','like','%'.$search.'%')
-                        ->orderBy('id')->get();
+                        ->orderBy('id')->paginate(15);
                     
         return view('admin.articles.list')->with('data', $data);
     } 

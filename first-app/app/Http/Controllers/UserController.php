@@ -11,7 +11,7 @@ class UserController extends Controller
 {
     public function index() 
     {
-        $users = User::all();
+        $users = User::paginate(15);
         return view('admin.users.list')->with('users', $users);
     } 
 
@@ -60,13 +60,11 @@ class UserController extends Controller
 
     public function search(Request $request) 
     {
-        $users = User::all()->where('username', '=', 'gych');
-   
         $search = $request->search;
         $users = User::where('username','like','%'.$search.'%')
                         ->orWhere('rank','like','%'.$search.'%')
                         ->orWhere('email','like','%'.$search.'%')
-                        ->orderBy('id')->get();
+                        ->orderBy('id')->paginate(15);
 
         return view('admin.users.list')->with('users', $users);
     } 

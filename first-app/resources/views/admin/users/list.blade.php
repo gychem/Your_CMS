@@ -62,6 +62,10 @@
             @endforeach
         </tbody>
     </table>
+
+   
+    {{ $users->links('components.pagination') }}
+
 </div>
 
 

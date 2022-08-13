@@ -3,6 +3,7 @@
 
 
 <h2>Current Features</h2>
+
 <b>Admin Panel</b>
 - Create and manage news articles, categories, authors, pages and users.
 - Inbox for contact messages.
@@ -11,14 +12,18 @@
 - Login & register 
 - Forgot password
 
+<b>Contact</b>
+- Auto fill in fields when user is logged in.
+
+<br>
+
 <h2>Upcoming features</h2>
 
 <b>News Articles</b>
 - functional button to load more articles on the overview page
 - Metadata 
 
-<b>Contact</b>
-- Auto fill in fields when user is logged in.
+
 
 <b>User</b>
 - E-mail verification
