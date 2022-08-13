@@ -24,9 +24,10 @@
                 @endforeach
             </div>
 
-            <div class="flex justify-center">
-                <x-button>Load more posts...</x-button>
-            </div>
+        
+            {{ $articles->links('components.pagination') }}
+              
+           
 
         </div>
     </div>
