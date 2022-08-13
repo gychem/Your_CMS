@@ -67,5 +67,11 @@ class UserController extends Controller
                         ->orderBy('id')->paginate(15);
 
         return view('admin.users.list')->with('users', $users);
-    } 
+    }
+    
+    public function profile(User $user)
+    {
+        dd($user->username);
+        return view('profile.index')->with('user', $user);
+    }
 }

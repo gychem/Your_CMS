@@ -7,6 +7,10 @@ Route::get('/', function () {
     return view('homepage');
 });
 
+Route::get('home', function () {
+    return view('homepage');
+});
+
 Route::get('contact', [\App\Http\Controllers\ContactController::class, 'index'])->name('contact');
 Route::post('contact', [\App\Http\Controllers\ContactController::class, 'store']);
 
@@ -23,6 +27,9 @@ Route::post('register', [\App\Http\Controllers\RegisterController::class, 'store
 Route::get('login', [\App\Http\Controllers\SessionsController::class, 'create'])->name('login')->middleware('guest');
 Route::post('login', [\App\Http\Controllers\SessionsController::class, 'store'])->middleware('guest');
 Route::get('logout', [\App\Http\Controllers\SessionsController::class, 'destroy'])->name('logout')->middleware('auth'); 
+
+//User -> Profile
+Route::get('{user}', [\App\Http\Controllers\ProfilesController::class, 'index']);
 
 //User -> Forget Password
 Route::get('lost-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('lost.password.get');
