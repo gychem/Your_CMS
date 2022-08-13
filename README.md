@@ -16,9 +16,15 @@
 
 <b>Contact</b>
 - Auto filler for input fields when logged in.
-- Message is sent to e-mail and admin inbox.
+- Contact messages are sent to e-mail and admin inbox.
 
 <br>
+
+<h2>Bugs</h2>
+- error when posting comment on news article
+- error when viewing profile id 2
+- error user delete
+- error when navigating to created page
 
 <h2>Upcoming features</h2>
 
@@ -27,12 +33,11 @@
 
 <b>User</b>
 - E-mail verification
-- Profile: Media, Feed, Settings, light & dark mode)
+- Profile: Media, Feed, Settings, light & dark mode, improve styling - responsiveness)
 - Configuration
 
 <b>Admin</b>
 - Configuration
-- Option to edit news categories.
 - Page templates
 
 <b>Image Uploads</b>
@@ -42,4 +47,7 @@
 <b>Improve Styling</b>
 - Success alert message.
 - Forgot password e-mail.
-- Footer
+- Footer change resources flowbite to laravel
+- pagination in light mode, highlight current page
+
+<b>Newsletter</b>
