@@ -17,10 +17,6 @@ class ArticleFactory extends Factory
      */
     public function definition()
     {
-
-
-
-        
         $randomNumber = rand(0, 99999);
           
         return [

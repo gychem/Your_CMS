@@ -31,6 +31,21 @@ class ArticleCategoryController extends Controller
         return redirect('admin/news/categories')->with('success', "You have created a new category!");;
     } 
 
+    public function edit(Category $category) 
+    {
+        return view('admin.articles.edit-category')->with('category', $category);
+    } 
+
+    public function update(Request $request, Category $category) 
+    {
+        $category->update([
+            'name' => $request->name,
+        ]);
+
+        return redirect('/admin/news/categories')->with('success', "Category $category->name has been updated.");
+    } 
+
+
     public function destroy(Category $category) 
     {
         $category->delete();

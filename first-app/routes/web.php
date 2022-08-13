@@ -37,6 +37,7 @@ Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPass
 
 // Admin
 Route::get('admin', [\App\Http\Controllers\AdminController::class, 'index'])->name('admin'); 
+
 //User -> Profile
 Route::get('{user}', [\App\Http\Controllers\ProfilesController::class, 'index']);
 
@@ -55,8 +56,10 @@ Route::post('admin/news/search', [\App\Http\Controllers\ArticleController::class
 // Admin -> News -> Categories
 Route::get('admin/news/categories', [\App\Http\Controllers\ArticleCategoryController::class, 'index'])->name('admin/news/categories')->middleware('admin'); 
 Route::get('admin/news/categories/{category:slug}', [\App\Http\Controllers\ArticleCategoryController::class, 'show'])->middleware('admin'); 
+Route::get('admin/news/categories/edit/{category:slug}', [\App\Http\Controllers\ArticleCategoryController::class, 'edit'])->middleware('admin'); 
+Route::post('admin/news/categories/edit/{category:slug}', [\App\Http\Controllers\ArticleCategoryController::class, 'update'])->middleware('admin'); 
 Route::post('admin/news/categories/create', [\App\Http\Controllers\ArticleCategoryController::class, 'store'])->name('admin/news/categories/create')->middleware('admin'); 
-Route::get('admin/news/categories/delete/{category}', [\App\Http\Controllers\ArticleCategoryController::class, 'destroy'])->name('admin/news/categories/delete/{category}')->middleware('admin'); 
+Route::get('admin/news/categories/delete/{category:slug}', [\App\Http\Controllers\ArticleCategoryController::class, 'destroy'])->name('admin/news/categories/delete/{category}')->middleware('admin'); 
 
 // Admin -> News -> Authors
 Route::get('admin/news/authors', [\App\Http\Controllers\AuthorsController::class, 'index'])->name('admin/news/authors')->middleware('admin');
