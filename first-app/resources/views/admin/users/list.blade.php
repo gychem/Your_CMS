@@ -35,7 +35,7 @@
         </thead>
         <tbody>
             @foreach ($users as $user)   
-                <tr onclick="window.location='/{{ $user->username }}';" class="bg-white border-b cursor-pointer hover:bg-slate-50 dark:bg-gray-700 dark:border-gray-600 dark:hover:bg-slate-600">
+                <tr onclick="window.location='/profile/{{ $user->username }}';" class="bg-white border-b cursor-pointer hover:bg-slate-50 dark:bg-gray-700 dark:border-gray-600 dark:hover:bg-slate-600">
                     <td class="py-4 px-6">
                         {{ $user->id }}
                     </td>

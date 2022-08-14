@@ -34,7 +34,7 @@
                         </button>
                         <ul id="dropdown-header-user" class="hidden py-2 absolute bg-slate-100  dark:bg-slate-800 rounded mt-2 z-20 border-solid border-2 border-slate-300 border-opacity-10">
                             <li>
-                                <a href="/{{ $profile[0]['username'] }}" class="flex items-center p-2 w-full text-base font-normal text-gray-900 transition duration-75 group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700">Profile</a>
+                                <a href="/profile/{{ $profile[0]['username'] }}" class="flex items-center p-2 w-full text-base font-normal text-gray-900 transition duration-75 group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700">Profile</a>
                             </li>
                             <li>
                                 <a href="{{route('admin/pages')}}" class="flex items-center p-2 w-full text-base font-normal text-gray-900 transition duration-75 group hover:bg-gray-200 dark:text-white dark:hover:bg-gray-700">Settings</a>
