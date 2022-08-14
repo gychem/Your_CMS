@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
-use App\Models\User;
 use Illuminate\Validation\Rule;
+
+use App\Models\User;
+use App\Models\Profile;
 
 class UserController extends Controller
 {
@@ -31,6 +33,14 @@ class UserController extends Controller
         $attributes = request()->validate($rules);
 
         $user = User::create($attributes);
+ 
+        $profile = Profile::create([
+            'username' => $user->username,
+            'title' => 'title comes here.',
+            'body' => 'body',
+            'user_id' => $user->id,
+            'image' => '/images/profiles/default.png'
+        ]);
 
         return redirect('/admin/users')->with('success', "User has been created.");
     }
