@@ -24,7 +24,7 @@
 
     @auth
         <div class="w-full rounded shadow-md mt-4 bg-white pl-6 pr-6 pt-2 pb-2  dark:bg-gray-700">
-            <form method="POST" action="/news/{{ $article->slug }}/comment">
+            <form method="POST" action="/news/{{ $article->id }}/comment">
                 @csrf
                 <header class="flex items-center">
                     <div class="flex-shrink-0"> 
