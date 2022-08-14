@@ -20,12 +20,6 @@
 
 <br>
 
-<h2>Bugs</h2>
-- error when posting comment on news article
-- error when viewing profile id 2
-- error user delete
-- error when navigating to created page
-
 <h2>Upcoming features</h2>
 
 <b>News Articles</b>
@@ -51,3 +45,9 @@
 - pagination in light mode, highlight current page
 
 <b>Newsletter</b>
+
+<b>Extensions</b>
+- Booking Manager
+- Event Calendar
+- Custom Contact
+- Layout Editor
