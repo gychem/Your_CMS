@@ -36,13 +36,14 @@ Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showRese
 Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 
 // Admin
-Route::get('admin', [\App\Http\Controllers\AdminController::class, 'index'])->name('admin'); 
+Route::get('admin', [\App\Http\Controllers\AdminController::class, 'index'])->name('admin')->middleware('admin'); 
+
+// Pages
+Route::get('{page:slug}', [\App\Http\Controllers\PagesController::class, 'show']);
 
 //User -> Profile
 Route::get('{user}', [\App\Http\Controllers\ProfilesController::class, 'index']);
 
-// Pages
-Route::get('{page:slug}', [\App\Http\Controllers\PagesController::class, 'show'])->name('{page:slug}');
 
 // Admin -> News
 Route::get('admin/news/create', [\App\Http\Controllers\ArticleController::class, 'create'])->name('admin/news/create')->middleware('admin'); 
