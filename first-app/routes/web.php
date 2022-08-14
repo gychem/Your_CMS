@@ -77,6 +77,7 @@ Route::post('admin/users/create', [\App\Http\Controllers\UserController::class, 
 Route::get('admin/users/edit/{user}', [\App\Http\Controllers\UserController::class, 'edit'])->name('admin/users/edit/{user}')->middleware('admin');  
 Route::post('admin/users/edit/{user}', [\App\Http\Controllers\UserController::class, 'update'])->name('admin/users/edit/{user}')->middleware('admin');
 Route::post('admin/users/search', [\App\Http\Controllers\UserController::class, 'search'])->name('admin/users/search')->middleware('admin');
+Route::get('admin/users/delete/{user}', [\App\Http\Controllers\UserController::class, 'destroy'])->middleware('admin');
 
 // Admin -> Pages
 Route::get('admin/pages', [\App\Http\Controllers\PagesController::class, 'index'])->name('admin/pages')->middleware('admin');
