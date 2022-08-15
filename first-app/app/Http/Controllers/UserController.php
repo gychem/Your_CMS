@@ -33,13 +33,15 @@ class UserController extends Controller
         $attributes = request()->validate($rules);
 
         $user = User::create($attributes);
- 
+
         $profile = Profile::create([
             'username' => $user->username,
+            'slug' =>  str()->slug($user->username),
             'title' => 'title comes here.',
             'body' => 'body',
-            'user_id' => $user->id,
-            'image' => '/images/profiles/default.png'
+            'user_id' => auth()->user()->id,
+            'image' => '/images/profiles/default.png',
+            'header-image' => '/images/profiles/default-header.png'
         ]);
 
         return redirect('/admin/users')->with('success', "User has been created.");
