@@ -39,7 +39,7 @@ class UserController extends Controller
             'slug' =>  str()->slug($user->username),
             'title' => 'title comes here.',
             'body' => 'body',
-            'user_id' => auth()->user()->id,
+            'user_id' => $user->id,
             'image' => '/images/profiles/default.png',
             'header-image' => '/images/profiles/default-header.png'
         ]);
