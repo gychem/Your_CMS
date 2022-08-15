@@ -24,7 +24,7 @@
         @foreach ($element as $page => $url)
                 @if ($page == $paginator->currentPage())
                         <li class="active mt-2">
-                            <a href="#" class="font-semibold text-gray-800 bg-gray-50 hover:bg-gray-100 py-2 px-4 rounded shadow-md dark:text-gray-300 dark:bg-gray-800 dark:hover:bg-gray-600">{{ $page }}<span class="sr-only">(current)</span></a>
+                            <a href="#" class="font-semibold text-gray-800 bg-gray-200 hover:bg-gray-100 py-2 px-4 rounded shadow-md dark:text-gray-300 dark:bg-gray-800 dark:hover:bg-gray-600">{{ $page }}<span class="sr-only">(current)</span></a>
                         </li>
                 @else
                         <li class="mt-2">
