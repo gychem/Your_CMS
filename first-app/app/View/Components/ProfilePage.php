@@ -2,9 +2,10 @@
 
 namespace App\View\Components;
 use Illuminate\Support\Facades\Auth;
-
+use Illuminate\Support\Collection;
 use Illuminate\View\Component;
 use App\Models\Profile;
+use Illuminate\Http\Request;
 
 class ProfilePage extends Component
 {
@@ -15,11 +16,9 @@ class ProfilePage extends Component
      */
     public $profile;
 
-    public function __construct()
+    public function __construct(Request $request)
     {
-        if(auth()->user()) {
-            $this->profile = Profile::find(Auth::id()); 
-        }  
+        $this->profile = $request->profile;  
     }
 
     /**
