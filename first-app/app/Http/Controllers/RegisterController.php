@@ -37,7 +37,8 @@ class RegisterController extends Controller
             'title' => 'title comes here.',
             'body' => 'body',
             'user_id' => auth()->user()->id,
-            'image' => '/images/profiles/default.png'
+            'image' => '/images/profiles/default.png',
+            'header-image' => '/images/profiles/default-header.png'
         ]);
 
         return redirect('/')->with('success', 'Your account has been created.');

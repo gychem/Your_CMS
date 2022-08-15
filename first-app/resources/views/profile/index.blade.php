@@ -3,7 +3,7 @@
 <div class="container mb-3 relative">
 
     <header class="w-full rounded">
-        <img class="w-full h-80 rounded" src="https://source.unsplash.com/random"></img>
+        <img class="w-full h-80 rounded" src="/images/profiles/default-header.png"></img>
     </header>
 
 
