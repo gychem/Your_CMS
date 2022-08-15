@@ -4,7 +4,7 @@
 
 <div class="w-full max-w-xxl">
 
-    <form action="{{ route('admin/news/authors/gycsearch') }}" class="w-full flex gap-2 text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-white p-2 rounded" method="POST">
+    <form action="/admin/news/search" class="w-full flex gap-2 text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-white p-2 rounded" method="POST">
     @csrf
         <input class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" name="search" id="search" type="text" placeholder="Search on title...">  
         <x-button>Search</x-button>
@@ -14,6 +14,9 @@
     <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400 mt-2 rounded overflow-hidden">
         <thead class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-800 dark:text-white">
             <tr>
+                <th scope="col" class="py-3 px-6">
+                    ID
+                </th>
                 <th scope="col" class="py-3 px-6">
                     Title
                 </th>
@@ -38,8 +41,11 @@
             </tr>
         </thead>
         <tbody>
-            @foreach ($data['articles'] as $article)   
+            @foreach ($articles as $article)   
                 <tr onclick="window.location='/news/{{ $article->slug }}';" class="bg-white border-b cursor-pointer hover:bg-slate-50 dark:bg-gray-700 dark:border-gray-600 dark:hover:bg-slate-600">
+                    <td class="py-4 px-6">
+                            {{ $article->id }}
+                        </td>    
                     <th scope="row" class="py-4 px-6 font-medium whitespace-nowrap">
                         {{ $article->title }}
                     </th>
@@ -71,7 +77,7 @@
         </tbody>
     </table>
 
-    {{ $data['articles']->links('components.pagination') }}
+    {{ $articles->links('components.pagination') }}
 
 </div>
 

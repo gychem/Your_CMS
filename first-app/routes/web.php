@@ -49,7 +49,7 @@ Route::get('{page:slug}', [\App\Http\Controllers\PagesController::class, 'show']
 // Admin -> News
 Route::get('admin/news/create', [\App\Http\Controllers\ArticleController::class, 'create'])->name('admin/news/create')->middleware('admin'); 
 Route::post('admin/news/create', [\App\Http\Controllers\ArticleController::class, 'store'])->name('admin/news/create')->middleware('admin');  
-Route::get('admin/news', [\App\Http\Controllers\AdminArticlesController::class, 'index'])->name('admin/news')->middleware('admin'); 
+Route::get('admin/news', [\App\Http\Controllers\ArticleController::class, 'index_admin'])->name('admin/news')->middleware('admin'); 
 Route::get('admin/news/edit/{article:slug}', [\App\Http\Controllers\ArticleController::class, 'edit'])->middleware('admin');  
 Route::post('admin/news/edit/{article:slug}', [\App\Http\Controllers\ArticleController::class, 'update'])->middleware('admin');  
 Route::get('admin/news/delete/{article:slug}', [\App\Http\Controllers\ArticleController::class, 'destroy'])->middleware('admin'); 

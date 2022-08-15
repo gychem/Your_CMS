@@ -19,6 +19,7 @@
                 </div>
             </a> -->
             <div class="grid justify-center grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+             
                 @foreach ($articles as $article) 
                     <a rel="noopener noreferrer" href="/news/{{ $article->slug }}" class="bg-white hover:bg-gray-100 rounded shadow-md  w-full mx-auto group hover:no-underline focus:no-underline dark:bg-gray-700 dark:hover:bg-gray-800">
                         <img role="presentation" class="object-cover w-full rounded h-44 dark:bg-gray-500" src="{{ $article->image }}">

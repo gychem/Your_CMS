@@ -10,7 +10,7 @@ use App\Models\Category;
 use App\Models\Author;
 use App\Models\User;
 use App\Models\Postimage;
-
+use App\Models\Comment;
 
 class ArticleController extends Controller
 {
@@ -18,8 +18,14 @@ class ArticleController extends Controller
 
     public function index() 
     {
-        $articles = Article::paginate(9);
+        $articles = Article::skip(1)->paginate(9);
         return view('articles.overview')->with('articles', $articles);
+    } 
+
+    public function index_admin() 
+    {
+        $articles = Article::paginate(15);
+        return view('admin.articles.list')->with('articles', $articles);
     } 
 
     public function index_author(Author $author) 
