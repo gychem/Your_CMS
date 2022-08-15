@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('title')->nullable();
             $table->string('body')->nullable();
             $table->string('image')->nullable();
-            $table->string('header-image')->nullable();
+            $table->string('headerImage')->nullable();
            // $table->foreignId('user_id')->unique();
         });
     }

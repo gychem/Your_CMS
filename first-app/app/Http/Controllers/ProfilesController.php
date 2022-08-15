@@ -13,7 +13,7 @@ class ProfilesController extends Controller
 {
     public function index(Profile $profile)
     {
-        return view('profile.index')->with('profile', $profile);
+        return view('profile.index')->with('profile', $profile);  
     }
 
     public function edit(Profile $profile)
@@ -38,7 +38,7 @@ class ProfilesController extends Controller
             $data['profileImage']= '/images/profiles/uploads/'.$filename;
             $profileImage = $data['profileImage'];
 
-            $articleImage = Postimage::create([
+            Postimage::create([
                 'image' =>  $data['profileImage']
             ]); 
 
@@ -55,12 +55,12 @@ class ProfilesController extends Controller
             $data['headerImage']= '/images/profiles/uploads/'.$filename;
             $headerImage = $data['headerImage'];
 
-            $articleImage = Postimage::create([
+            Postimage::create([
                 'image' =>  $data['headerImage']
             ]); 
 
             $profile->update([
-                'header-image' => $headerImage
+                'headerImage' => $headerImage
             ]);
         }
 

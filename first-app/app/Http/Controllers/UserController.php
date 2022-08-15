@@ -41,7 +41,7 @@ class UserController extends Controller
             'body' => 'body',
             'user_id' => $user->id,
             'image' => '/images/profiles/default.png',
-            'header-image' => '/images/profiles/default-header.png'
+            'headerImage' => '/images/profiles/default-header.png'
         ]);
 
         return redirect('/admin/users')->with('success', "User has been created.");
