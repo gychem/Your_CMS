@@ -4,7 +4,7 @@
 
 <div class="w-full max-w-xxl">
 
-    <form action="{{ route('admin/news/search') }}" class="w-full flex gap-2 text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-white p-2 rounded" method="POST">
+    <form action="{{ route('admin/news/authors/gycsearch') }}" class="w-full flex gap-2 text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-white p-2 rounded" method="POST">
     @csrf
         <input class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" name="search" id="search" type="text" placeholder="Search on title...">  
         <x-button>Search</x-button>

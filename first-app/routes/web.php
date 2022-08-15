@@ -65,6 +65,7 @@ Route::get('admin/news/categories/delete/{category:slug}', [\App\Http\Controller
 // Admin -> News -> Authors
 Route::get('admin/news/authors', [\App\Http\Controllers\AuthorsController::class, 'index'])->name('admin/news/authors')->middleware('admin');
 Route::get('admin/news/authors/{author:slug}', [\App\Http\Controllers\AuthorsController::class, 'show'])->middleware('admin');
+Route::post('admin/news/authors/{author:slug}/search', [\App\Http\Controllers\AuthorsController::class, 'search'])->middleware('admin');
 
 // Admin -> Inbox
 Route::get('admin/inbox', [\App\Http\Controllers\ContactController::class, 'index_admin'])->name('admin/inbox')->middleware('admin');
