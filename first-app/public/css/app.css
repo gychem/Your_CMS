@@ -1509,6 +1509,10 @@ input:checked + .toggle-bg {
     --tw-bg-opacity: 1;
     background-color: rgb(71 85 105 / var(--tw-bg-opacity))
 }
+.bg-slate-300 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(203 213 225 / var(--tw-bg-opacity))
+}
 .bg-opacity-50 {
     --tw-bg-opacity: 0.5
 }
