@@ -11,7 +11,7 @@
 
         <div class="z-10 relative ml-6" style="width:200px; margin-top:-130px;">
 
-            <img style="height:200px; width:200px" class="rounded-full shadow-md"  src="{{ $profile->image }}"></img>
+            <img style="height:160px; width:200px" class="rounded-full shadow-md"  src="{{ $profile->image }}"></img>
             <div class="text-center">
                 <span class="font-semibold text-2xl capitalize dark:text-white">{{ $profile->username }}</span><br>
                 <span class="font-semibold capitalize text-slate-400">{{ $profile->title }}</span>
