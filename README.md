@@ -1,8 +1,9 @@
-<h1>Gych CMS [WIP]</h1>
+<h1>Your CMS</h1>
 
+Your CMS is an open source website content management system in development.<br>
+Follow us on social media to stay up to date with the progress!<br><br>
 
-
-<h2>Current Features</h2>
+<h2>Current Features</h2><hr>
 
 <b>Admin Panel</b>
 - Create and manage news articles, categories, authors, pages and users.
@@ -11,16 +12,16 @@
 <b>User System</b>
 - Login & register 
 - Forgot password
-- Ranks: user, author and admin
-- Profiles
+- User ranks
+- Profile Pages [In Progress]
 
 <b>Contact</b>
 - Auto filler for input fields when logged in.
 - Contact messages are sent to e-mail and admin inbox.
 
-<br>
+<br><br>
 
-<h2>Upcoming features</h2>
+<h2>Upcoming features</h2><hr>
 
 <b>News Articles</b>
 - Metadata 
@@ -31,8 +32,10 @@
 - Configuration
 
 <b>Admin</b>
-- Configuration
+- Configuration (site settings)
 - Page templates
+- Manage user comments
+- Add author option when creating or editing a user.
 
 <b>Image Uploads</b>
 - Use images in SunEditor when creating a page or news article.
@@ -51,3 +54,12 @@
 - Event Calendar
 - Custom Contact
 - Layout Editor
+
+<br><br>
+<hr>
+<br><br>
+
+<b>Resources</b>
+- Laravel 9
+- Tailwind CSS-flowbite
+- SunEditor
