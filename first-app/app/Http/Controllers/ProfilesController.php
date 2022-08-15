@@ -18,7 +18,11 @@ class ProfilesController extends Controller
 
     public function edit(Profile $profile)
     {
-        return view('profile.settings')->with('profile', $profile);
+        if($profile->username != auth()->user()->username) {
+            return redirect()->back();
+        } else {
+            return view('profile.settings')->with('profile', $profile);
+        }
     }
 
     public function update(Request $request, Profile $profile) 
