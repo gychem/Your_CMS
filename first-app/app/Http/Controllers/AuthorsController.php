@@ -17,7 +17,7 @@ class AuthorsController extends Controller
 
     public function show(Author $author) 
     {
-        $articles = Article::all()->where('user_id', '=', $author->user_id);
+        $articles = Article::where('user_id', '=', $author->user_id)->paginate(15);
         return view('admin.articles.author')->with('articles', $articles);
     }
 }
