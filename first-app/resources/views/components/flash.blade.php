@@ -2,7 +2,7 @@
     <div    x-data="{ show: true }"
             x-init="setTimeout(() => show = false, 4000)" 
             x-show="show"
-            class="bg-blue-500 fixed rounded mb-4 text-center inline-block align-middle text-white mx-auto z-10" style="width:50%; font-size: 25px;">
+            class="absolute right-0 bottom-0 dark:bg-slate-600 dark:text-slate-200 rounded text-center z-10" style="width:50%; font-size: 25px;">
         <p>{{ session('success') }}</p>
     </div>
 @endif

@@ -1501,6 +1501,14 @@ input:checked + .toggle-bg {
     --tw-bg-opacity: 1;
     background-color: rgb(30 41 59 / var(--tw-bg-opacity))
 }
+.bg-slate-900 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(15 23 42 / var(--tw-bg-opacity))
+}
+.bg-slate-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(71 85 105 / var(--tw-bg-opacity))
+}
 .bg-opacity-50 {
     --tw-bg-opacity: 0.5
 }
@@ -2083,6 +2091,14 @@ input:checked + .toggle-bg {
 }
 .dark .dark\:bg-gray-800\/50 {
     background-color: rgb(31 41 55 / 0.5)
+}
+.dark .dark\:bg-slate-200 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(226 232 240 / var(--tw-bg-opacity))
+}
+.dark .dark\:bg-slate-600 {
+    --tw-bg-opacity: 1;
+    background-color: rgb(71 85 105 / var(--tw-bg-opacity))
 }
 .dark .dark\:bg-opacity-80 {
     --tw-bg-opacity: 0.8
