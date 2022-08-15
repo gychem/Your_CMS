@@ -28,22 +28,22 @@ Route::get('login', [\App\Http\Controllers\SessionsController::class, 'create'])
 Route::post('login', [\App\Http\Controllers\SessionsController::class, 'store'])->middleware('guest');
 Route::get('logout', [\App\Http\Controllers\SessionsController::class, 'destroy'])->name('logout')->middleware('auth'); 
 
-//User -> Profile
-Route::get('profile/{user}', [\App\Http\Controllers\ProfilesController::class, 'index']);
-
 //User -> Forget Password
 Route::get('lost-password', [ForgotPasswordController::class, 'showForgetPasswordForm'])->name('lost.password.get');
 Route::post('forget-password', [ForgotPasswordController::class, 'submitForgetPasswordForm'])->name('forget.password.post'); 
 Route::get('reset-password/{token}', [ForgotPasswordController::class, 'showResetPasswordForm'])->name('reset.password.get');
 Route::post('reset-password', [ForgotPasswordController::class, 'submitResetPasswordForm'])->name('reset.password.post');
 
+//User -> Profile
+Route::get('profile/{profile:slug}', [\App\Http\Controllers\ProfilesController::class, 'index']);
+Route::get('profile/{profile:slug}/edit', [\App\Http\Controllers\ProfilesController::class, 'edit'])->middleware('auth');
+Route::post('profile/{profile:slug}/edit', [\App\Http\Controllers\ProfilesController::class, 'update'])->middleware('auth');
 
 // Admin
 Route::get('admin', [\App\Http\Controllers\AdminController::class, 'index'])->name('admin')->middleware('admin'); 
 
 // Pages
 Route::get('{page:slug}', [\App\Http\Controllers\PagesController::class, 'show']);
-
 
 // Admin -> News
 Route::get('admin/news/create', [\App\Http\Controllers\ArticleController::class, 'create'])->name('admin/news/create')->middleware('admin'); 

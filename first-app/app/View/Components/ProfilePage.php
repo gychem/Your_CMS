@@ -1,6 +1,7 @@
 <?php
 
 namespace App\View\Components;
+use Illuminate\Support\Facades\Auth;
 
 use Illuminate\View\Component;
 use App\Models\Profile;
@@ -17,9 +18,8 @@ class ProfilePage extends Component
     public function __construct()
     {
         if(auth()->user()) {
-            $this->profile = Profile::where('username', '=', auth()->user()->username)->get();
-        } 
-        
+            $this->profile = Profile::find(Auth::id()); 
+        }  
     }
 
     /**

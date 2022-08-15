@@ -1,5 +1,5 @@
 <x-profilepage>
     
-    {{ $profile[0]['body'] }}
+    {{ $profile->body }}
 
 </x-profilepage>

@@ -34,6 +34,7 @@ class RegisterController extends Controller
  
         $profile = Profile::create([
             'username' => $user->username,
+            'slug' =>  str()->slug($user->username),
             'title' => 'title comes here.',
             'body' => 'body',
             'user_id' => auth()->user()->id,

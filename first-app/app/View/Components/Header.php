@@ -2,9 +2,12 @@
 
 namespace App\View\Components;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\View\Component;
+
 use App\Models\Page;
 use App\Models\Profile;
+use App\Models\User;
 
 class Header extends Component
 {
@@ -21,9 +24,8 @@ class Header extends Component
         $this->pages = Page::all();
 
         if(auth()->user()) {
-            $this->profile = Profile::where('username', '=', auth()->user()->username)->get();
-        } 
-        
+            $this->profile = Profile::find(Auth::id()); 
+        }   
     }
 
     /**
