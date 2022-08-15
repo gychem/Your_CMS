@@ -16,6 +16,7 @@ Route::post('contact', [\App\Http\Controllers\ContactController::class, 'store']
 
 // News Articles
 Route::get('news', [\App\Http\Controllers\ArticleController::class, 'index'])->name('news');
+Route::post('news/search', [\App\Http\Controllers\ArticleController::class, 'search'])->name('news/search');
 Route::get('news/categories/{category:slug}', [\App\Http\Controllers\ArticleController::class, 'index_category']);
 Route::get('news/authors/{author:slug}', [\App\Http\Controllers\ArticleController::class, 'index_author']);
 Route::get('news/{article:slug}', [\App\Http\Controllers\ArticleController::class, 'show']);
@@ -52,7 +53,7 @@ Route::get('admin/news', [\App\Http\Controllers\AdminArticlesController::class, 
 Route::get('admin/news/edit/{article:slug}', [\App\Http\Controllers\ArticleController::class, 'edit'])->middleware('admin');  
 Route::post('admin/news/edit/{article:slug}', [\App\Http\Controllers\ArticleController::class, 'update'])->middleware('admin');  
 Route::get('admin/news/delete/{article:slug}', [\App\Http\Controllers\ArticleController::class, 'destroy'])->middleware('admin'); 
-Route::post('admin/news/search', [\App\Http\Controllers\ArticleController::class, 'search'])->name('admin/news/search')->middleware('admin');
+Route::post('admin/news/search', [\App\Http\Controllers\ArticleController::class, 'searchAdmin'])->name('admin/news/search')->middleware('admin');
 
 // Admin -> News -> Categories
 Route::get('admin/news/categories', [\App\Http\Controllers\ArticleCategoryController::class, 'index'])->name('admin/news/categories')->middleware('admin'); 

@@ -2,7 +2,14 @@
 
 <div class="container mb-3">
     <div class="w-full">
-        <div class="container max-w-6xl p-3 mx-auto space-y-6 sm:space-y-12">
+
+        <form action="{{ route('news/search') }}" class="w-full flex gap-2 text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-white p-2 rounded" method="POST">
+        @csrf
+            <input class="border-white shadow w-full rounded py-2 px-3 text-gray-700 disable-outline shadow-outline" name="search" id="search" type="text" placeholder="Search on title...">  
+            <x-button>Search</x-button>
+        </form>
+
+        <div class="container w-full mt-3 mx-auto space-y-6 sm:space-y-12">
             <!-- <a rel="noopener noreferrer" href="#" class="block bg-white rounded shadow-md max-w-sm gap-3 mx-auto sm:max-w-full group hover:no-underline focus:no-underline lg:grid lg:grid-cols-12 dark:bg-gray-900">
                 <img src="https://source.unsplash.com/random/480x360" alt="" class="object-cover w-full h-64 rounded sm:h-96 lg:col-span-7 dark:bg-gray-500">
                 <div class="p-6 space-y-2 lg:col-span-5">

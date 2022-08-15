@@ -121,13 +121,16 @@ class ArticleController extends Controller
         return redirect('/admin/news')->with('success', "Article ID $article->id has been deleted.");
     } 
 
+    public function searchAdmin(Request $request) 
+    {
+        $data['articles'] = Article::where('title','like','%'.$request->search.'%')->orderBy('id')->paginate(15);
+        return view('admin.articles.list')->with('data', $data);
+    } 
+
     public function search(Request $request) 
     {
-        $search = $request->search;
-        $data['articles'] = Article::where('title','like','%'.$search.'%')
-                        ->orderBy('id')->paginate(15);
-                    
-        return view('admin.articles.list')->with('data', $data);
+        $articles = Article::where('title','like','%'.$request->search.'%')->orderBy('id')->paginate(9);
+        return view('articles.overview')->with('articles', $articles);
     } 
 
 }
