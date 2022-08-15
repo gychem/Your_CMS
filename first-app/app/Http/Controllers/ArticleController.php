@@ -18,8 +18,12 @@ class ArticleController extends Controller
 
     public function index() 
     {
-        $articles = Article::skip(1)->paginate(9);
-        return view('articles.overview')->with('articles', $articles);
+        $articles = Article::paginate(10);
+        $firstArticle = $articles[0];
+        unset($articles[0]);
+
+        $data = ['articles' => $articles, 'firstArticle' => $firstArticle];
+        return view('articles.overview')->with('data', $data);
     } 
 
     public function index_admin() 
