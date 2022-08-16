@@ -1,12 +1,11 @@
 <x-layout>
 
-</style>
 <div class="container mt-3 mb-3">
     <div class="w-full flex">
 
         <div class="w-4/5 bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4 dark:bg-gray-800 dark:text-white">
             Welcome to Your CMS, <br><br>
-            Your CMS is an open source website content management system in development.<br>
+            Your CMS is currenrly in development.<br>
             Follow us on social media to stay up to date with the progress!<br><br><br>
 
             <h2 class="text-xl"><b>Current Features</b></h2><hr><br>
@@ -33,9 +32,7 @@
             <ul class="text-slate-400">
                 <li>Auto filler for input fields when logged in.</li>
                 <li>Contact messages are sent to e-mail and admin inbox.</li>
-            <ul>
-
-           
+            <ul> 
         </div>
 
     <div class="p-4 w-1/5 bg-white rounded border shadow-md sm:p-8 dark:bg-gray-800 dark:border-gray-700 ml-2">
@@ -110,19 +107,7 @@
             </ul>
         </div>
     </div>
-
 </div>
-
-
-
-
-
-
-
-
-
-
-
 
 </div>
 
