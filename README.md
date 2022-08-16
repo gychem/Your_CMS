@@ -5,9 +5,18 @@ Follow us on social media to stay up to date with the progress!<br><br>
 
 <h2>Current Features</h2><hr>
 
-<b>Admin Panel</b>
-- Create and manage news articles, categories, authors, pages and users.
-- Inbox for contact messages.
+<b>News Articles</b>
+- Overview page with pagination and search bar.
+- Article show page with comments.
+- Categories
+- Authors
+
+<b>Pages</b>
+- Easily customizable pages.
+
+<b>Contact Page</b>
+- Auto fill input fields when the user is logged in.
+- Contact messages are sent to an e-mail adress and admin inbox.
 
 <b>User System</b>
 - Login & register 
@@ -15,9 +24,9 @@ Follow us on social media to stay up to date with the progress!<br><br>
 - User ranks
 - Profile Pages [In Progress]
 
-<b>Contact</b>
-- Auto filler for input fields when logged in.
-- Contact messages are sent to e-mail and admin inbox.
+<b>Admin Panel</b>
+- Create and manage news articles, categories, authors, pages and users.
+- Inbox for contact messages.
 
 <br><br>
 
