@@ -12,7 +12,7 @@ class Profile extends Model
 
     public $timestamps = false;
 
-    protected $fillable = ['title', 'body', 'username', 'user_id', 'image', 'slug', 'header-image'];
+    protected $fillable = ['title', 'body', 'username', 'user_id', 'image', 'slug', 'headerImage'];
 
     public function user()
     {

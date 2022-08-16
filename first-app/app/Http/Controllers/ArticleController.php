@@ -34,14 +34,22 @@ class ArticleController extends Controller
 
     public function index_author(Author $author) 
     {       
-        $articles = Article::all()->where('user_id', '=', $author->user_id);
-        return view('articles.overview')->with('articles', $articles);
+        $articles = Article::where('user_id', $author->user_id)->paginate(10);
+        $firstArticle = $articles[0];
+        unset($articles[0]);
+
+        $data = ['articles' => $articles, 'firstArticle' => $firstArticle];
+        return view('articles.overview')->with('data', $data);
     } 
 
     public function index_category(Category $category) 
     {       
-        $articles = Article::all()->where('category_id', '=', $category->id);
-        return view('articles.overview')->with('articles', $articles);
+        $articles = Article::where('category_id', $category->id)->paginate(10);
+        $firstArticle = $articles[0];
+        unset($articles[0]);
+
+        $data = ['articles' => $articles, 'firstArticle' => $firstArticle];
+        return view('articles.overview')->with('data', $data);
     } 
 
     public function create() 
