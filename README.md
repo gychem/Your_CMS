@@ -37,7 +37,7 @@ Follow us on social media to stay up to date with the progress!<br><br>
 
 <b>User</b>
 - E-mail verification
-- Profile: Media, Feed, Settings, light & dark mode, improve styling - responsiveness)
+- Profile: Media, Feed
 - Configuration
 
 <b>Admin</b>
@@ -51,10 +51,7 @@ Follow us on social media to stay up to date with the progress!<br><br>
 - Show an image preview after uploading.
 
 <b>Improve Styling</b>
-- Success alert message.
 - Forgot password e-mail.
-- Footer change resources flowbite to laravel
-- pagination in light mode, highlight current page
 
 <b>Newsletter</b>
 
