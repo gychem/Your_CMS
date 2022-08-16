@@ -3,13 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ForgotPasswordController;
 
-Route::get('/', function () {
-    return view('homepage');
-});
-
-Route::get('home', function () {
-    return view('homepage');
-});
+Route::get('/', [\App\Http\Controllers\HomepageController::class, 'index']);
+Route::get('home', [\App\Http\Controllers\HomepageController::class, 'index'])->name('home');
 
 Route::get('contact', [\App\Http\Controllers\ContactController::class, 'index'])->name('contact');
 Route::post('contact', [\App\Http\Controllers\ContactController::class, 'store']);
