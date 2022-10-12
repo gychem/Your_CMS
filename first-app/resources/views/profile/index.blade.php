@@ -1,4 +1,4 @@
-<x-profilepage>
+<x-profilepage :profile="$profile">
     
     {{ $profile->body }}
 
