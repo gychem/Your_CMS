@@ -1,7 +1,7 @@
 <h1>Your CMS</h1>
 
 Your CMS is an open source website content management system in development.<br>
-Follow us on social media to stay up to date with the progress!<br><br>
+<br><br>
 
 <h2>Current Features</h2><hr>
 
