@@ -1,7 +1,10 @@
 <h1>Your CMS</h1>
 
 Your CMS is an open source website content management system in development.<br>
-<br><br>
+
+<a href="http://cms.gychem.be">Link to project</a>
+<br>
+<br>
 
 <h2>Current Features</h2><hr>
 
