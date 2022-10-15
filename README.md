@@ -1,25 +1,23 @@
-<h1>Your CMS</h1>
+# Your CMS
+## Introduction
 
-Your CMS is an open source website content management system in development.<br>
+Your CMS is an open source website content management system that is still in development.<br>
+Click <a href="http://cms.gychem.be">here</a> to open a demo version of the project in its current state.
 
-<a href="http://cms.gychem.be">Link to project</a>
-<br>
-<br>
-
-<h2>Current Features</h2><hr>
+## Current Features
 
 <b>News Articles</b>
 - Overview page with pagination and search bar.
-- Article show page with comments.
+- Single article 'show' page with user comments section.
 - Categories
 - Authors
 
-<b>Pages</b>
-- Easily customizable pages.
+<b>Custom Pages</b>
+- Create and customize new pages..
 
 <b>Contact Page</b>
-- Auto fill input fields when the user is logged in.
-- Contact messages are sent to an e-mail adress and admin inbox.
+- User data is automatically filled in when the user is logged in.
+- Contact messages are sent to e-mail and inbox on the admin panel.
 
 <b>User System</b>
 - Login & register 
@@ -31,44 +29,6 @@ Your CMS is an open source website content management system in development.<br>
 - Create and manage news articles, categories, authors, pages and users.
 - Inbox for contact messages.
 
-<br><br>
-
-<h2>Upcoming features</h2><hr>
-
-<b>News Articles</b>
-- Metadata 
-
-<b>User</b>
-- E-mail verification
-- Profile: Media, Feed
-- Configuration
-
-<b>Admin</b>
-- Configuration (site settings)
-- Page templates
-- Manage user comments
-- Add author option when creating or editing a user.
-
-<b>Image Uploads</b>
-- Use images in SunEditor when creating a page or news article.
-- Show an image preview after uploading.
-
-<b>Improve Styling</b>
-- Forgot password e-mail.
-
-<b>Newsletter</b>
-
-<b>Extensions</b>
-- Booking Manager
-- Event Calendar
-- Custom Contact
-- Layout Editor
-
-<br><br>
 <hr>
-<br><br>
 
-<b>Resources</b>
-- Laravel 9
-- Tailwind CSS-flowbite
-- SunEditor
+<img src="https://user-images.githubusercontent.com/83142502/196009242-a09535be-9d0f-4407-8dd6-84ee6d246e67.png">
